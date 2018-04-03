@@ -27,8 +27,8 @@ let loginFunction = (browser, selectors, data) => {
     .click(selectors.loginButtonXpath)
     .useCss()
     .waitForElementVisible(selectors.loginMessage,5000)
-    .setValue(selectors.usernameInput,data.username)
-    .setValue(selectors.passwordInput,data.password)
+    .setValue(selectors.usernameInput, data.username)
+    .setValue(selectors.passwordInput, data.password)
     .click(selectors.submitButton)
     
 }
@@ -54,6 +54,12 @@ const createSurvey = (browser, data) => {
 }
 
 const addingDeletingQuestions = (browser, data) => {
+    browser
+        .useXpath()
+        .waitForElementVisible(selectors.mS, 2000)
+        .pause(1000)
+        .click(selectors.mS)
+        .click(selectors.testTitle)
 
 }
 
@@ -61,5 +67,6 @@ const addingDeletingQuestions = (browser, data) => {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
         createSurvey: createSurvey,
+        addingDeletingQuestions: addingDeletingQuestions
 
     }

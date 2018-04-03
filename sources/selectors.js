@@ -21,7 +21,7 @@ module.exports = {
     testTitle: '//a[@title="Testing Do Not Delete"]',
 
 //Adding and Deleting Questions
-
+    mS: '(//a[contains(text(), "My Surveys")])[1]',
  
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
