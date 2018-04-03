@@ -1,5 +1,4 @@
 /tests_output
 nightwatch.props.js
-/.vscode
 selenium-debug.log
 *CHROME*
