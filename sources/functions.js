@@ -1,5 +1,5 @@
 const selectors = require('./selectors')
-const data = require('./userData')
+const data = require('./data')
 
 
 let loginLogoutFunction = (browser,selectors,data) => {

@@ -1,5 +1,5 @@
 const selectors = require('../sources/selectors')
-const userData = require('../sources/userData')
+const data = require('../sources/data')
 const functions = require('../sources/functions')
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
     },
     'QM-2 Creating Survey': browser => {
         browser
-            functions.loginFunction(browser, selectors, userData.userdata)
-            functions.createSurvey(browser, userData)
+            functions.loginFunction(browser, selectors, data.userdata)
+            functions.createSurvey(browser, data)
             
     }
 
