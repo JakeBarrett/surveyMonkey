@@ -20,6 +20,35 @@ module.exports = {
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
     testTitle: '//a[@title="This is a test"]',
 
+
+// UI Testing
+    logo: 'a[class="responsive-logo static-logo"]',
+    navbar: 'div[id="hd"]',
+
+    //nav menu
+    howItWorks: 'a[href="/mp/take-a-tour/?ut_source=header"]',
+    products: '//*[@id="hd"]/div/ol/li[2]/div/a',
+    examples: '//*[@id="hd"]/div/ol/li[3]/div/a',
+    resources: '//*[@id="hd"]/div/ol/li[4]/div/a',
+    planPricing: 'a[href="/pricing/?ut_source=header"]',
+
+    //main
+    banner: 'h1[class="national-med white medium hero-text-1"]',
+    signUpBut: 'a[class="cta yellow-btn hero-btn left-btn"]', //PRO SIGN UP button
+    signUpFree: 'a[class="cta green-white-green hero-btn"]', //SIGN UP FREE button
+    carouHead: 'h1[class="national-med hero-text-2"]',
+    carousel: 'div[class="carousel"]',
+    carouBut: 'div[class="buttons"]', //Carousel button
+    creSurBut: 'a[class="cta green-white-green large-btn hero-btn"]', //CREATE SURVEY button from homepage
+    iPhone1st: 'div[class="first right size7of12 desktop"]',
+    iPhone2nd: 'div[class="second left size7of12 desktop"',
+    iphone3rd: 'div[class="third right size7of12 desktop"]',
+    allPlans: 'a[class="cta white-green-btn large-btn hero-btn"]', //SEE ALL PLANS button
+    learnMor: 'a[class="cta blue-white-btn large-btn hero-btn"]', //LEARN MORE button
+    getStarted: 'a[class="cta green-white-green large-btn"]', //GET STARTED button
+
+
+
  
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
@@ -32,4 +61,5 @@ module.exports = {
         'signUpButton': 'button[name="submit"]',
         'welcomeText': 'div[id="group_welcome_flow_user_purpose_v3"]',
     },
+
 }
