@@ -49,10 +49,27 @@ const createSurvey = (browser, data) => {
 
 }
 
+/**
+ * Function referencing QM-5 (Signup)
+ * @param {object} browser the Nightwatch object
+ */
+let signUp = (browser) => {
+    browser
+        .click(selectors.signup.homepageSignUpButton)
+        .waitForElementVisible(selectors.signup.signUpPageTitle, 2000)
+        setInputValue(browser, selectors.signup.usernameInput, data.signUpData.username)
+        setInputValue(browser, selectors.signup.passwordInput, data.signUpData.password)
+        setInputValue(browser, selectors.signup.emailInput, data.signUpData.email)
+        setInputValue(browser, selectors.signup.firstNameInput, data.signUpData.firstName)
+        setInputValue(browser, selectors.signup.lastNameInput, data.signUpData.lastName)
+    browser.click(selectors.signup.signUpButton)
+        .waitForElementVisible(selectors.signup.welcomeText, 5000)
+}
+
 
     module.exports = {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
         createSurvey: createSurvey,
-
+        signUp: signUp,
     }
