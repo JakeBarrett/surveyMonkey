@@ -6,9 +6,9 @@ module.exports = {
 
     },
     signUpData: {
-        username: "test1",
+        username: "danjintest3",
         password: "testtest",
-        email: "test@test.com",
+        email: "danjin1@test.com",
         firstName: "Test",
         lastName: "Test",
     }

@@ -18,5 +18,6 @@ module.exports = {
         'firstNameInput': 'input[name="first_name"]',
         'lastNameInput': 'input[name="last_name"]',
         'signUpButton': 'button[name="submit"]',
+        'welcomeText': 'div[id="group_welcome_flow_user_purpose_v3"]',
     },
 }
