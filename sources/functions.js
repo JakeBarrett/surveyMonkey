@@ -40,15 +40,22 @@ const createSurvey = (browser, data) => {
         .setValue(selectors.surveyName, data.surveyTitle)
         .useXpath()
         .waitForElementPresent(selectors.createButton, 2000)
-        .useXpath()
         .click(selectors.createButton)
-        .pause(2000)
+        .useCss()
+        .waitForElementNotPresent(selectors.scratch, 2000)
+        .useXpath()
+        .waitForElementVisible(selectors.getStarted, 2000)
         .click(selectors.getStarted)
+        .waitForElementNotPresent(selectors.getStarted, 5000)
         .click(selectors.mySurveys)
-        .expect.element(selectors.testTitle).text.to.equal("This is a test")
-
+        .waitForElementVisible(selectors.testTitle, 8000)
+        .pause(5000)
+        .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
+const addingDeletingQuestions = (browser, data) => {
+
+}
 
     module.exports = {
         loginLogoutFunction: loginLogoutFunction,

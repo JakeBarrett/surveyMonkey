@@ -18,7 +18,9 @@ module.exports = {
     getStarted: '//button[@class="wds-button"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
-    testTitle: '//a[@title="This is a test"]',
+    testTitle: '//a[@title="Testing Do Not Delete"]',
+
+//Adding and Deleting Questions
 
  
     'signup': {
