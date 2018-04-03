@@ -9,10 +9,9 @@ module.exports = {
     },
 
     after: browser => {
-
         browser.end()
     },
 
-    "QM-3: Login & Logout": browser => functions.loginFunction(browser, selectors, data.userdata),
+    "QM-5: Sign Up": browser => functions.signUp(browser)
 
 }

@@ -9,4 +9,14 @@ module.exports = {
     account : 'a[id="userAcctTab_MainMenu"]',
     signOut : 'a[href="/user/sign-out/"]',
 
+    'signup': {
+        'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
+        'signUpPageTitle': 'h1[class="wds-type--page-title"]',
+        'usernameInput': 'input[name="username"]',
+        'passwordInput': 'input[name="password"]',
+        'emailInput': 'input[name="email"]',
+        'firstNameInput': 'input[name="first_name"]',
+        'lastNameInput': 'input[name="last_name"]',
+        'signUpButton': 'button[name="submit"]',
+    },
 }
