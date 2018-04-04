@@ -27,8 +27,8 @@ let loginFunction = (browser, selectors, data) => {
     .click(selectors.loginButtonXpath)
     .useCss()
     .waitForElementVisible(selectors.loginMessage,5000)
-    .setValue(selectors.usernameInput,data.username)
-    .setValue(selectors.passwordInput,data.password)
+    .setValue(selectors.usernameInput, data.username)
+    .setValue(selectors.passwordInput, data.password)
     .click(selectors.submitButton)
     
 }
@@ -40,15 +40,28 @@ const createSurvey = (browser, data) => {
         .setValue(selectors.surveyName, data.surveyTitle)
         .useXpath()
         .waitForElementPresent(selectors.createButton, 2000)
-        .useXpath()
         .click(selectors.createButton)
-        .pause(2000)
+        .useCss()
+        .waitForElementNotPresent(selectors.scratch, 2000)
+        .useXpath()
+        .waitForElementVisible(selectors.getStarted, 2000)
         .click(selectors.getStarted)
+        .waitForElementNotPresent(selectors.getStarted, 5000)
         .click(selectors.mySurveys)
-        .expect.element(selectors.testTitle).text.to.equal("This is a test")
-
+        .waitForElementVisible(selectors.testTitle, 8000)
+        .pause(5000)
+        .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
+const addingDeletingQuestions = (browser, data) => {
+    browser
+        .useXpath()
+        .waitForElementVisible(selectors.mS, 2000)
+        .pause(1000)
+        .click(selectors.mS)
+        .click(selectors.testTitle)
+
+}
 /**
  * Function referencing QM-5 (Signup)
  * @param {object} browser the Nightwatch object
@@ -71,5 +84,7 @@ let signUp = (browser) => {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
         createSurvey: createSurvey,
+        addingDeletingQuestions: addingDeletingQuestions,
+
         signUp: signUp,
     }
