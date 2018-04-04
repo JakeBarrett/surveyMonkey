@@ -32,7 +32,8 @@ module.exports = {
         footer: 'Copyright © 1999-2018 SurveyMonkey',
 
 //Adding Quetion(s)
-    q1: 'Favorite Soda'
+    q1: 'Favorite Soda',
+    q2: 'Favorite Pizza',
     
 
 }

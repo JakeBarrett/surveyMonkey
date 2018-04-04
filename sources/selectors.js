@@ -52,7 +52,10 @@ module.exports = {
 //Adding and Deleting Questions
     mS: '(//a[contains(text(), "My Surveys")])[1]',
     addQ: '(//span[@class="smf-icon"])[1]',
-    enterQ: '(//span[@class="placeholder"])[1]',
+    enterQ: '(//div[@data-id="editTitle"])[1]',
+    questoinType: '(//span[@class="dropdownArrow smf-icon"])[2]',
+    singleTB: '(//a[@class="option add-q-item"])[4]',
+    nextQ: '(//a[.="NEXT QUESTION"])[1]',
 
  
     'signup': {
