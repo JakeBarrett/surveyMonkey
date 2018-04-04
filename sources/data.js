@@ -15,6 +15,9 @@ module.exports = {
         email: "danjin1@test.com",
         firstName: "Test",
         lastName: "Test",
+        usernameInvalid: "Please make your username at least 3 characters long.",
+        passwordInvalid: "Short passwords are easy to guess. Try one with at least 8 characters.",
+        emailInvalid: "Your email address must contain at least 3 characters.",
     },
 
     editQuestionData : {

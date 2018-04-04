@@ -1,6 +1,12 @@
 const selectors = require('./selectors')
 const data = require('./data')
 
+let setInputValue = (browser, selector, data) => {
+    browser
+        .clearValue(selector)
+        .setValue(selector, data)
+        .verify.value(selector, data)
+}
 
 let loginLogoutFunction = (browser,selectors,data) => {
     browser
@@ -78,10 +84,10 @@ const addingDeletingQuestions = (browser, data) => {
 
 }
 /**
- * Function referencing QM-5 (Signup)
+ * Function referencing QM-14 (Signup with valid inputs)
  * @param {object} browser the Nightwatch object
  */
-let signUp = (browser) => {
+let signUpValid = (browser) => {
     browser
         .click(selectors.signup.homepageSignUpButton)
         .waitForElementVisible(selectors.signup.signUpPageTitle, 2000)
@@ -92,6 +98,22 @@ let signUp = (browser) => {
         setInputValue(browser, selectors.signup.lastNameInput, data.signUpData.lastName)
     browser.click(selectors.signup.signUpButton)
         .waitForElementVisible(selectors.signup.welcomeText, 5000)
+}
+
+let signUpInvalid = (browser) => {
+    browser
+        .click(selectors.signup.homepageSignUpButton)
+        .waitForElementVisible(selectors.signup.signUpButton, 5000)
+        setInputValue(browser, selectors.signup.usernameInput, "")
+        setInputValue(browser, selectors.signup.passwordInput, "")
+        setInputValue(browser, selectors.signup.emailInput, "")
+        setInputValue(browser, selectors.signup.firstNameInput, "")
+        setInputValue(browser, selectors.signup.lastNameInput, "")
+    browser.click(selectors.signup.signUpButton)
+        .waitForElementVisible(selectors.signup.errorMessage, 5000)
+    browser.expect.element(selectors.signup.errorMessage).text.to.contain(data.signUpData.usernameInvalid)
+    browser.expect.element(selectors.signup.errorMessage).text.to.contain(data.signUpData.passwordInvalid)
+    browser.expect.element(selectors.signup.errorMessage).text.to.contain(data.signUpData.emailInvalid)
 }
 
 let uiTest = (browser) => {
@@ -158,6 +180,9 @@ let editQuestionFunction=(browser,selectors,data)=>{
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
+        signUpValid: signUpValid,
+        signUpInvalid: signUpInvalid,
+        uiTest: uiTest,
+        setInputValue: setInputValue,
         editQuestionFunction:editQuestionFunction,
-        signUp: signUp,
     }
