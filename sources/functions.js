@@ -76,6 +76,9 @@ let uiTest = (browser) => {
         .waitForElementPresent(selectors.iPhone2nd, 1000)
         .verify.elementPresent(selectors.iPhone2nd)
         .assert.elementPresent(selectors.iPhone2nd)
+        .waitForElementPresent(selectors.iPhone3rd, 1000)
+        .verify.elementPresent(selectors.iPhone3rd)
+        .assert.elementPresent(selectors.iPhone3rd)
         
         .end()
 }

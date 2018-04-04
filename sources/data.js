@@ -19,7 +19,6 @@ module.exports = {
 
 // UI testing
     
-
         titlepage: 'SurveyMonkey: The World’s Most Popular Free Online Survey Tool',
         url: 'https://www.surveymonkey.com/',
         logo: 'SurveyMonkey®',
