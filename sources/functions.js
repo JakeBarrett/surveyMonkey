@@ -165,13 +165,9 @@ let editQuestionFunction=(browser,selectors,data)=>{
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
-<<<<<<< HEAD
         signUpValid: signUpValid,
         signUpInvalid: signUpInvalid,
         uiTest: uiTest,
         setInputValue: setInputValue,
-=======
         editQuestionFunction:editQuestionFunction,
-        signUp: signUp,
->>>>>>> develop
     }
