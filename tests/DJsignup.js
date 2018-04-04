@@ -1,3 +1,4 @@
+/*
 const selectors = require('../sources/selectors')
 const functions = require('../sources/functions')
 const data = require('../sources/data')
@@ -15,3 +16,4 @@ module.exports = {
     "QM-5: Sign Up": browser => functions.signUp(browser)
 
 }
+*/

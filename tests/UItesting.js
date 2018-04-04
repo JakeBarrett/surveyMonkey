@@ -1,3 +1,4 @@
+/*
 const selectors = require('../sources/selectors')
 const data = require('../sources/data')
 const functions = require('../sources/functions')
@@ -17,3 +18,4 @@ module.exports = {
 
 
 }
+*/
