@@ -18,9 +18,9 @@ let loginFunction = (browser,selectors,data) => {
     .click(selectors.submitButton)
     .waitForElementVisible(selectors.welcomeMessage,5000)
     .verify.containsText(selectors.welcomeMessage,data.welcome)
-    .click(selectors.account)
-    .click(selectors.signOut)
-    .waitForElementVisible(selectors.loginButtonCss, 4000)
+    //.click(selectors.account)
+    //.click(selectors.signOut)
+    //.waitForElementVisible(selectors.loginButtonCss, 4000)
 }
 
 module.exports = {
