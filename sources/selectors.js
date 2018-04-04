@@ -18,7 +18,7 @@ module.exports = {
     getStarted: '//button[@class="wds-button"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
-    testTitle: '//a[@title="This is a test"]',
+    testTitle: '//a[@title="Testing Do Not Delete"]',
 
 
 // UI Testing
@@ -49,6 +49,8 @@ module.exports = {
 
 
 
+//Adding and Deleting Questions
+    mS: '(//a[contains(text(), "My Surveys")])[1]',
  
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
