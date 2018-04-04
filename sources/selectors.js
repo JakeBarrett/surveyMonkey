@@ -62,6 +62,7 @@ module.exports = {
         'lastNameInput': 'input[name="last_name"]',
         'signUpButton': 'button[name="submit"]',
         'welcomeText': 'div[id="group_welcome_flow_user_purpose_v3"]',
+        'errorMessage': 'div[class="ErrorMessage"]',
     },
 
 }
