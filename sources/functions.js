@@ -79,12 +79,45 @@ let signUp = (browser) => {
         .waitForElementVisible(selectors.signup.welcomeText, 5000)
 }
 
+let uiTest = (browser) => {
+    browser
+        .assert.title(data.titlepage)
+        .assert.urlContains(data.url)
+        .waitForElementPresent('body', 1000)
+        .assert.visible('body')
+
+    browser
+        .verify.elementPresent(selectors.logo)
+        .assert.visible(selectors.logo)
+        .verify.containsText(selectors.logo, data.logo)
+        .waitForElementPresent(selectors.navbar, 1000)
+        .verify.elementPresent(selectors.navbar)
+        .assert.visible(selectors.navbar)
+        .waitForElementPresent(selectors.carousel, 1000)
+        .verify.elementPresent(selectors.carousel)
+        .assert.elementPresent(selectors.carousel)
+        .waitForElementPresent(selectors.carouHead, 1000)
+        .verify.elementPresent(selectors.carouHead)
+        .assert.elementPresent(selectors.carouHead)
+        .verify.containsText(selectors.carouHead, data.carouHead)
+        .waitForElementPresent(selectors.iPhone1st, 1000)
+        .verify.elementPresent(selectors.iPhone1st)
+        .assert.elementPresent(selectors.iPhone1st)
+        .waitForElementPresent(selectors.iPhone2nd, 1000)
+        .verify.elementPresent(selectors.iPhone2nd)
+        .assert.elementPresent(selectors.iPhone2nd)
+        .waitForElementPresent(selectors.iPhone3rd, 1000)
+        .verify.elementPresent(selectors.iPhone3rd)
+        .assert.elementPresent(selectors.iPhone3rd)
+        .end()
+}
+
 
     module.exports = {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
-
+        
         signUp: signUp,
     }
