@@ -12,6 +12,6 @@ module.exports = {
         browser.end()
     },
 
-    "QM-5: Sign Up": browser => functions.signUp(browser)
+    //"QM-5: Sign Up": browser => functions.signUp(browser)
 
 }
