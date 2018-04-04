@@ -134,14 +134,44 @@ let uiTest = (browser) => {
         .end()
 }
 
+let editQuestionFunction=(browser,selectors,data)=>{
+    browser
+    .useXpath()
+    .click(selectors.mySurveys)
+    .useCss()
+    .click(selectors.surveyTitle)
+    .useXpath()
+    .click(selectors.designSurvey)
+    .useCss()
+    .click(selectors.getStarted)
+    .click(selectors.question1)
+    .click(selectors.dropDown)
+    .click(selectors.multipleChoice)
+    .waitForElementVisible(selectors.tealBox,5000)
+    .clearValue(selectors.questionInput)
+    .setValue(selectors.questionInput, data.question)
+    .useXpath()
+    .setValue(selectors.answerInput,data.answer1)
+    .setValue(selectors.answerInput,data.answer2)
+    .setValue(selectors.answerInput,data.answer3)
+    .setValue(selectors.answerInput,data.answer4)
+    .useCss()
+    .click(selectors.saveButton)
+    .verify.containsText(selectors.question1,data.question)
+}
 
     module.exports = {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
+<<<<<<< HEAD
         signUpValid: signUpValid,
         signUpInvalid: signUpInvalid,
         uiTest: uiTest,
         setInputValue: setInputValue,
+=======
+        editQuestionFunction:editQuestionFunction,
+        signUp: signUp,
+>>>>>>> develop
     }

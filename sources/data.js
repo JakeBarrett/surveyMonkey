@@ -20,6 +20,15 @@ module.exports = {
         emailInvalid: "Your email address must contain at least 3 characters.",
     },
 
+    editQuestionData : {
+        question: 'What is your favorite sport?',
+        answer1: 'Basketball',
+        answer2: 'Baseball',
+        answer3: 'Football',
+        answer4: 'Hockey',
+
+    },
+
 // UI testing
     
         titlepage: 'SurveyMonkey: The World’s Most Popular Free Online Survey Tool',
