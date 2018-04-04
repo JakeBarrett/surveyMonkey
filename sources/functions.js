@@ -118,6 +118,6 @@ let uiTest = (browser) => {
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
-        
+        uiTest: uiTest,
         signUp: signUp,
     }
