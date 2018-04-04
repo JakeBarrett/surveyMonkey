@@ -70,4 +70,19 @@ module.exports = {
         'welcomeText': 'div[id="group_welcome_flow_user_purpose_v3"]',
     },
 
+    editQuestion : {
+        mySurveys : '//ol/li[contains(.,"My Surveys")]',
+        surveyTitle: 'a[title="Do Not Delete me"]',
+        designSurvey: '//li/a[contains(.,"DESIGN SURVEY")]',
+        getStarted: 'button[class="wds-button"]',
+        question1: 'div[data-qnumber="1"]',
+        dropDown: 'span[class="qType"]',
+        multipleChoice : 'a[data-help="qmc"]',
+        tealBox: 'a[data-action="pipingMenu"]',
+        questionInput: 'div[class="rte sm-input sm-input--stretch mce-content-body mce-edit-focus"]',
+        answerInput: '(//div[@class="rte input"])[2]',
+        saveButton: 'a[class="wds-button wds-button--sm save"]',
+
+    },
+
 }
