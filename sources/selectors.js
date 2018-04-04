@@ -56,7 +56,7 @@ module.exports = {
     questionType: '(//span[@class="dropdownArrow smf-icon"])[2]',
     singleTB: '(//a[@class="option add-q-item"])[4]',
     nextQ: '(//a[.="NEXT QUESTION"])[1]',
-    questionType2: '(//span[.="Multiple Choice"])[4]',
+    qType: '//a[@id="changeQType"]',
 
  
     'signup': {
