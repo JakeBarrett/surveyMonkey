@@ -15,7 +15,7 @@ module.exports = {
     scratch: 'button[id="scratch"]',
     surveyName: 'input[id="surveyTitle"]',
     createButton: '//button[.="CREATE SURVEY"]',
-    getStarted: '//button[@class="wds-button"]',
+    getstarted: '//button[@class="wds-button"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
     testTitle: '//a[@title="Testing Do Not Delete"]',
@@ -51,6 +51,9 @@ module.exports = {
 
 //Adding and Deleting Questions
     mS: '(//a[contains(text(), "My Surveys")])[1]',
+    addQ: '(//span[@class="smf-icon"])[1]',
+    enterQ: '(//span[@class="placeholder"])[1]',
+
  
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',

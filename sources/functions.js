@@ -19,7 +19,7 @@ let loginLogoutFunction = (browser,selectors,data) => {
     .waitForElementVisible(selectors.loginButtonCss, 4000)
 }
 
-
+//EW
 let loginFunction = (browser, selectors, data) => {
     browser
     .useXpath()
@@ -33,6 +33,7 @@ let loginFunction = (browser, selectors, data) => {
     
 }
 
+//EW
 const createSurvey = (browser, data) => {
     browser
         .click(selectors.createSurvey)
@@ -44,15 +45,16 @@ const createSurvey = (browser, data) => {
         .useCss()
         .waitForElementNotPresent(selectors.scratch, 2000)
         .useXpath()
-        .waitForElementVisible(selectors.getStarted, 2000)
+        .waitForElementVisible(selectors.getstarted, 2000)
         .click(selectors.getStarted)
-        .waitForElementNotPresent(selectors.getStarted, 5000)
+        .waitForElementNotPresent(selectors.getstarted, 5000)
         .click(selectors.mySurveys)
         .waitForElementVisible(selectors.testTitle, 8000)
         .pause(5000)
         .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
+//EW 
 const addingDeletingQuestions = (browser, data) => {
     browser
         .useXpath()
@@ -60,6 +62,10 @@ const addingDeletingQuestions = (browser, data) => {
         .pause(1000)
         .click(selectors.mS)
         .click(selectors.testTitle)
+        .useXpath()
+        .waitForElementVisible(selectors.addQ, 2000)
+        .click(selectors.addQ)
+        .click(selectors.getstarted)
 
 }
 /**

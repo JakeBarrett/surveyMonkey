@@ -31,7 +31,8 @@ module.exports = {
         curious: "Aren't you just a little bit curious?",
         footer: 'Copyright © 1999-2018 SurveyMonkey',
 
-        
+//Adding Quetion(s)
+    q1: 'Favorite Soda'
     
 
 }
