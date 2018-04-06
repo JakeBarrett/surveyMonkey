@@ -10,4 +10,9 @@ module.exports = {
         browser
     },
 
+    'QM-33 Send Survey': browser => {
+        browser
+            functions.loginFunction(browser, selectors, data)
+    },
+
 }
