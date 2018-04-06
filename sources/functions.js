@@ -84,8 +84,8 @@ const addingDeletingQuestions = (browser, data) => {
         .click(selectors.save)
         .waitForElementVisible(selectors.questionTwo, 2000)
         .moveToElement(selectors.questionTwo, undefined, undefined)
-        .waitForElementVisible(selectors.delteQuestion, 2000)
-        .click(selectors.delteQuestion)
+        .waitForElementVisible(selectors.deleteQuestion, 2000)
+        .click(selectors.deleteQuestion)
         .pause(3000)
 
 }
