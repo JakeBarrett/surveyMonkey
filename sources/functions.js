@@ -88,8 +88,16 @@ const addingDeletingQuestions = (browser, data) => {
         .moveToElement(selectors.deleteQuestion, undefined, undefined)
         .click(selectors.deleteQuestion)
         .pause(3000)
-
 }
+
+//EW
+const sendSurvey = (browser) => {
+    browser
+        .useXpath()
+        .click(selectors.mySurveys)
+        .click(selectors.testTitle)
+}
+
 /**
  * Function referencing QM-14 (Signup with valid inputs)
  * @param {object} browser the Nightwatch object
@@ -187,6 +195,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
+        sendSurvey: sendSurvey,
         signUpValid: signUpValid,
         signUpInvalid: signUpInvalid,
         uiTest: uiTest,
