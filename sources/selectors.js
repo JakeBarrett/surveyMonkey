@@ -54,9 +54,13 @@ module.exports = {
     addQ: '(//span[@class="smf-icon"])[1]',
     enterQ: '(//div[@data-id="editTitle"])[1]',
     questionType: '(//span[@class="dropdownArrow smf-icon"])[2]',
-    singleTB: '(//a[@class="option add-q-item"])[4]',
+    singleTB: '//a[@data-action="SingleTextboxQuestion"]',
     nextQ: '(//a[.="NEXT QUESTION"])[1]',
     qType: '//a[@id="changeQType"]',
+    save: '(//a[@class="wds-button wds-button--sm save"])[1]',
+    questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
+    questionActions: '(//nav[@class"questionsActions]")[2]',
+    delteQuestion: '(//a[class="wds-button wds-button--sm wds-button--util delete"]',
 
  
     'signup': {

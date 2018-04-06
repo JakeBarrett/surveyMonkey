@@ -28,14 +28,14 @@ let loginLogoutFunction = (browser,selectors,data) => {
 //EW
 let loginFunction = (browser, selectors, data) => {
     browser
-    .useXpath()
-    .waitForElementVisible(selectors.loginButtonXpath,5000)
-    .click(selectors.loginButtonXpath)
-    .useCss()
-    .waitForElementVisible(selectors.loginMessage,5000)
-    .setValue(selectors.usernameInput, data.username)
-    .setValue(selectors.passwordInput, data.password)
-    .click(selectors.submitButton)
+        .useXpath()
+        .waitForElementVisible(selectors.loginButtonXpath,5000)
+        .click(selectors.loginButtonXpath)
+        .useCss()
+        .waitForElementVisible(selectors.loginMessage,5000)
+        .setValue(selectors.usernameInput, data.username)
+        .setValue(selectors.passwordInput, data.password)
+        .click(selectors.submitButton)
     
 }
 
@@ -77,10 +77,16 @@ const addingDeletingQuestions = (browser, data) => {
         .waitForElementVisible(selectors.enterQ, 2000)
         .setValue(selectors.enterQ, data.q1)
         .click(selectors.nextQ)
-        .click(selectors.qType)
-        // .click(selectors.singleTB)
-        // .waitForElementVisible(selectors.enterQ, 2000)
-        // .setValue(selectors.enterQ, data.q2)
+        .pause(2000)
+        .click(selectors.questionType)
+        .click(selectors.singleTB)
+        .setValue(selectors.enterQ, data.q2)
+        .click(selectors.save)
+        .waitForElementVisible(selectors.questionTwo, 2000)
+        .moveToElement(selectors.questionTwo, undefined, undefined)
+        .waitForElementVisible(selectors.delteQuestion, 2000)
+        .click(selectors.delteQuestion)
+        .pause(3000)
 
 }
 /**
