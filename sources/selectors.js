@@ -65,9 +65,11 @@ module.exports = {
         'errorMessage': 'div[class="ErrorMessage"]',
     },
 
+//Editing an Existing Question
+
     editQuestion : {
         mySurveys : '//ol/li[contains(.,"My Surveys")]',
-        surveyTitle: 'a[title="Do Not Delete me"]',
+        surveyTitle: 'a[title="Do Not Delete Me"]',
         designSurvey: '//li/a[contains(.,"DESIGN SURVEY")]',
         getStarted: 'button[class="wds-button"]',
         question1: 'div[data-qnumber="1"]',
@@ -79,5 +81,16 @@ module.exports = {
         saveButton: 'a[class="wds-button wds-button--sm save"]',
 
     },
+
+//Analyzing Results
+    analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data")]',
+    analyzeResultsButton : 'a[data-location="analyze"]',
+    questionsSummaries : 'li[id="mode_tab_question_summaries"]',
+    dataTrends: 'li[id="mode_tab_trends"]',
+    individualResponses: 'li[id="mode_tab_individual_responses"]',
+    dataTrendsPage: 'div[class="analyze-pages-content"]',
+    individualResponsesPage : 'div[class="respondent-data"]',
+
+
 
 }
