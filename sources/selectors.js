@@ -60,7 +60,7 @@ module.exports = {
     save: '(//a[@class="wds-button wds-button--sm save"])[1]',
     questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
     questionActions: '(//nav[@class"questionsActions]")[2]',
-    deleteQuestion: '(//a[class="wds-button wds-button--sm wds-button--util delete"]',
+    deleteQuestion: '(//a[class="wds-button wds-button--sm wds-button--util delete"])[2]',
 
  
     'signup': {
