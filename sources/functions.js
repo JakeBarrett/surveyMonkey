@@ -97,6 +97,12 @@ const sendSurvey = (browser) => {
         .useXpath()
         .click(selectors.mySurveys)
         .click(selectors.testTitle)
+        .click(selectors.collectResponces)
+        .click(selectors.xButton)
+        .waitForElementVisible(selectors.webLink, 2000)
+        .click(selectors.webLink)
+        .waitForElementVisible(selectors.copyButton, 2000)
+        .click(selectors.copyButton)
 }
 
 /**

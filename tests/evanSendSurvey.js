@@ -11,6 +11,7 @@ module.exports = {
     },
     'QM-33 Send Survey': browser => {
         functions.loginFunction(browser, selectors, data.userdata)
+        functions.sendSurvey(browser)
 
     },
 }

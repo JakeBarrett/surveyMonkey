@@ -62,7 +62,12 @@ module.exports = {
     questionActions: '(//nav[@class"questionsActions]")[2]',
     deleteQuestion: '//a[@name="Delete"]',
 
- 
+    //Sending Survey
+        collectResponces: '//a[@data-location="collect"]',
+        xButton: '//a[@class="dialog-close-btn cb-dialog-b smf-icon"]',
+        webLink: '//li[@collector-type="weblink"]',
+        copyButton: '//button[@id="copy-link-btn"]',
+
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
         'signUpPageTitle': 'h1[class="wds-type--page-title"]',
