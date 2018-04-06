@@ -80,6 +80,8 @@ module.exports = {
         saveButton: 'a[class="wds-button wds-button--sm save"]',
 
     },
+
+//Analyzing Results
     analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data")]',
     analyzeResultsButton : 'a[data-location="analyze"]',
     questionsSummaries : 'li[id="mode_tab_question_summaries"]',
