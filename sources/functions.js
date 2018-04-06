@@ -73,6 +73,7 @@ const addingDeletingQuestions = (browser, data) => {
         .click(selectors.addQ)
         .click(selectors.getstarted)
         .click(selectors.questionType)
+        .waitForElementVisible(selectors.singleTB, 2000)
         .click(selectors.singleTB)
         .waitForElementVisible(selectors.enterQ, 2000)
         .setValue(selectors.enterQ, data.q1)
