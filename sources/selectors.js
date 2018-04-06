@@ -15,7 +15,7 @@ module.exports = {
     scratch: 'button[id="scratch"]',
     surveyName: 'input[id="surveyTitle"]',
     createButton: '//button[.="CREATE SURVEY"]',
-    getStarted: '//button[@class="wds-button"]',
+    getstarted: '//button[@class="wds-button"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
     testTitle: '//a[@title="Testing Do Not Delete"]',
@@ -51,6 +51,17 @@ module.exports = {
 
 //Adding and Deleting Questions
     mS: '(//a[contains(text(), "My Surveys")])[1]',
+    addQ: '(//span[@class="smf-icon"])[1]',
+    enterQ: '(//div[@data-id="editTitle"])[1]',
+    questionType: '(//span[@class="dropdownArrow smf-icon"])[2]',
+    singleTB: '//a[@data-action="SingleTextboxQuestion"]',
+    nextQ: '(//a[.="NEXT QUESTION"])[1]',
+    qType: '//a[@id="changeQType"]',
+    save: '(//a[@class="wds-button wds-button--sm save"])[1]',
+    questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
+    questionActions: '(//nav[@class"questionsActions]")[2]',
+    deleteQuestion: '(//a[class="wds-button wds-button--sm wds-button--util delete"]',
+
  
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
@@ -62,6 +73,7 @@ module.exports = {
         'lastNameInput': 'input[name="last_name"]',
         'signUpButton': 'button[name="submit"]',
         'welcomeText': 'div[id="group_welcome_flow_user_purpose_v3"]',
+        'errorMessage': 'div[class="ErrorMessage"]',
     },
 
 //Editing an Existing Question

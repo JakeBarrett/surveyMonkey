@@ -15,6 +15,9 @@ module.exports = {
         email: "danjin1@test.com",
         firstName: "Test",
         lastName: "Test",
+        usernameInvalid: "Please make your username at least 3 characters long.",
+        passwordInvalid: "Short passwords are easy to guess. Try one with at least 8 characters.",
+        emailInvalid: "Your email address must contain at least 3 characters.",
     },
 
     editQuestionData : {
@@ -40,7 +43,9 @@ module.exports = {
         curious: "Aren't you just a little bit curious?",
         footer: 'Copyright © 1999-2018 SurveyMonkey',
 
-        
+//Adding Quetion(s)
+    q1: 'Favorite Soda',
+    q2: 'Favorite Pizza',
     
 
 }

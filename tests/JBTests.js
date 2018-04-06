@@ -12,7 +12,10 @@ module.exports = {
        browser.end()
    },
 
-"QM-3: Login & Logout" : browser => functions.loginFunction(browser,selectors,data.userdata),
+"QM-3: Login & Logout" : browser => {
+    functions.loginFunction(browser,selectors,data.userdata)
+},
+
  /*   
 "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
 */
