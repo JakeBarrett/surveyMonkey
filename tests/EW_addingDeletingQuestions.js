@@ -10,10 +10,10 @@ module.exports = {
         browser
     },
     
-    'QM-6 Adding and Deleting Questions': browser => {
-        browser
-            functions.loginFunction(browser, selectors, data.userdata)
-            functions.addingDeletingQuestions(browser, data)
+    // 'QM-6 Adding and Deleting Questions': browser => {
+    //     browser
+    //         functions.loginFunction(browser, selectors, data.userdata)
+    //         functions.addingDeletingQuestions(browser, data)
 
-    }
+    // }
 }
