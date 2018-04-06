@@ -25,20 +25,21 @@ let loginLogoutFunction = (browser,selectors,data) => {
     .waitForElementVisible(selectors.loginButtonCss, 4000)
 }
 
-
+//EW
 let loginFunction = (browser, selectors, data) => {
     browser
-    .useXpath()
-    .waitForElementVisible(selectors.loginButtonXpath,5000)
-    .click(selectors.loginButtonXpath)
-    .useCss()
-    .waitForElementVisible(selectors.loginMessage,5000)
-    .setValue(selectors.usernameInput, data.username)
-    .setValue(selectors.passwordInput, data.password)
-    .click(selectors.submitButton)
+        .useXpath()
+        .waitForElementVisible(selectors.loginButtonXpath,5000)
+        .click(selectors.loginButtonXpath)
+        .useCss()
+        .waitForElementVisible(selectors.loginMessage,5000)
+        .setValue(selectors.usernameInput, data.username)
+        .setValue(selectors.passwordInput, data.password)
+        .click(selectors.submitButton)
     
 }
 
+//EW
 const createSurvey = (browser, data) => {
     browser
         .click(selectors.createSurvey)
@@ -50,15 +51,16 @@ const createSurvey = (browser, data) => {
         .useCss()
         .waitForElementNotPresent(selectors.scratch, 2000)
         .useXpath()
-        .waitForElementVisible(selectors.getStarted, 2000)
+        .waitForElementVisible(selectors.getstarted, 2000)
         .click(selectors.getStarted)
-        .waitForElementNotPresent(selectors.getStarted, 5000)
+        .waitForElementNotPresent(selectors.getstarted, 5000)
         .click(selectors.mySurveys)
         .waitForElementVisible(selectors.testTitle, 8000)
         .pause(5000)
         .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
+//EW 
 const addingDeletingQuestions = (browser, data) => {
     browser
         .useXpath()
@@ -66,6 +68,26 @@ const addingDeletingQuestions = (browser, data) => {
         .pause(1000)
         .click(selectors.mS)
         .click(selectors.testTitle)
+        .useXpath()
+        .waitForElementVisible(selectors.addQ, 2000)
+        .click(selectors.addQ)
+        .click(selectors.getstarted)
+        .click(selectors.questionType)
+        .click(selectors.singleTB)
+        .waitForElementVisible(selectors.enterQ, 2000)
+        .setValue(selectors.enterQ, data.q1)
+        .click(selectors.nextQ)
+        .pause(2000)
+        .click(selectors.questionType)
+        .click(selectors.singleTB)
+        .setValue(selectors.enterQ, data.q2)
+        .click(selectors.save)
+        .waitForElementVisible(selectors.questionTwo, 2000)
+        .moveToElement(selectors.questionTwo, undefined, undefined)
+        .waitForElementVisible(selectors.deleteQuestion, 2000)
+        .moveTo(selectors.deleteQuestion)
+        .click(selectors.deleteQuestion)
+        .pause(3000)
 
 }
 /**
