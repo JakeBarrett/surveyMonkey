@@ -103,6 +103,8 @@ const sendSurvey = (browser) => {
         .click(selectors.webLink)
         .waitForElementVisible(selectors.copyButton, 2000)
         .click(selectors.copyButton)
+        .waitForElementPresent('//div[id="copy-link-notification"]', 3000)
+        .assert.elementPresent('//div[id="copy-link-notification"]')
 }
 
 /**
