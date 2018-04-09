@@ -62,17 +62,17 @@ module.exports = {
     questionActions: '(//nav[@class"questionsActions]")[2]',
     deleteQuestion: '//a[@name="Delete"]',
 
-    //Sending Survey - Evan
-        collectResponces: '//a[@data-location="collect"]',
-        xButton: '//a[@class="dialog-close-btn cb-dialog-b smf-icon"]',
-        webLink: '//li[@collector-type="weblink"]',
-        copyButton: '//button[@id="copy-link-btn"]',
+//Sending Survey - Evan
+    collectResponces: '//a[@data-location="collect"]',
+    xButton: '//a[@class="dialog-close-btn cb-dialog-b smf-icon"]',
+    webLink: '//li[@collector-type="weblink"]',
+    copyButton: '//button[@id="copy-link-btn"]',
 
-    //Deleting Surey - Evan
-        threeDots: '(//span[@class="smf-icon"])[14]',
-        deleteSurvey: '(//a[@data-action="delete"])[2]',
-        testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
-        redDelete: '(//a[@class="wds-button wds-button--warning delete-survey"])[2]',
+//Deleting Surey - Evan
+     threeDots: '//a[@data-survey-title="Testing Do Not Delete"]',
+     deleteSurvey: '(//a[@data-action="delete"])[2]',
+     testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
+     redDelete: '(//a[@class="wds-button wds-button--warning delete-survey"])[2]',
 
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',

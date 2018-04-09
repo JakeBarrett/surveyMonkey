@@ -63,40 +63,43 @@ const createSurvey = (browser, data) => {
 const addingDeletingQuestions = (browser, data) => {
     browser
         .useXpath()
-        .waitForElementVisible(selectors.mS, 2000)
-        .pause(1000)
-        .click(selectors.mS)
+        // .waitForElementVisible(selectors.mS, 2000)
+        // .pause(1000)
+        // .click(selectors.mS)
         .click(selectors.testTitle)
         .useXpath()
         .waitForElementVisible(selectors.addQ, 2000)
         .click(selectors.addQ)
-        .click(selectors.getstarted)
+        //.click(selectors.getstarted)
         .click(selectors.questionType)
         .waitForElementVisible(selectors.singleTB, 2000)
         .click(selectors.singleTB)
         .waitForElementVisible(selectors.enterQ, 2000)
         .setValue(selectors.enterQ, data.q1)
+        .waitForElementVisible(selectors.nextQ, 2000)
         .click(selectors.nextQ)
         .pause(2000)
         .click(selectors.questionType)
         .click(selectors.singleTB)
         .setValue(selectors.enterQ, data.q2)
         .click(selectors.save)
-        .waitForElementVisible(selectors.questionTwo, 2000)
+        .waitForElementVisible(selectors.questionTwo, 3000)
         .moveToElement(selectors.questionTwo, undefined, undefined)
         .pause(2000)
         .moveToElement(selectors.deleteQuestion, undefined, undefined)
         .click(selectors.deleteQuestion)
-        .pause(3000)
+        .getLocationInView(selectors.mySurveys)
+        .waitForElementVisible(selectors.mySurveys, 2000)
+        .click(selectors.mySurveys)
 }
 
 //Evan
 const sendSurvey = (browser) => {
     browser
         .useXpath()
-        .click(selectors.mySurveys)
         .click(selectors.testTitle)
         .click(selectors.collectResponces)
+        .waitForElementVisible(selectors.xButton, 2000)
         .click(selectors.xButton)
         .waitForElementVisible(selectors.webLink, 2000)
         .click(selectors.webLink)
@@ -104,6 +107,7 @@ const sendSurvey = (browser) => {
         .click(selectors.copyButton)
         .waitForElementPresent('//div[@class="sm-notification-container"]', 3000)
         .assert.elementPresent('//div[@class="sm-notification-container"]')
+        .click(selectors.mySurveys)
 }
 
 //Evan
