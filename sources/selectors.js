@@ -60,9 +60,14 @@ module.exports = {
     save: '(//a[@class="wds-button wds-button--sm save"])[1]',
     questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
     questionActions: '(//nav[@class"questionsActions]")[2]',
-    deleteQuestion: '(//a[class="wds-button wds-button--sm wds-button--util delete"]',
+    deleteQuestion: '//a[@name="Delete"]',
 
- 
+    //Sending Survey
+        collectResponces: '//a[@data-location="collect"]',
+        xButton: '//a[@class="dialog-close-btn cb-dialog-b smf-icon"]',
+        webLink: '//li[@collector-type="weblink"]',
+        copyButton: '//button[@id="copy-link-btn"]',
+
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
         'signUpPageTitle': 'h1[class="wds-type--page-title"]',
