@@ -52,11 +52,10 @@ const createSurvey = (browser, data) => {
         .waitForElementNotPresent(selectors.scratch, 2000)
         .useXpath()
         .waitForElementVisible(selectors.getstarted, 2000)
-        .click(selectors.getStarted)
+        .click(selectors.getstarted)
         .waitForElementNotPresent(selectors.getstarted, 5000)
         .click(selectors.mySurveys)
-        .waitForElementVisible(selectors.testTitle, 8000)
-        .pause(5000)
+        .waitForElementVisible(selectors.testTitle, 5000)
         .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 

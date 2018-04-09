@@ -15,7 +15,7 @@ module.exports = {
     scratch: 'button[id="scratch"]',
     surveyName: 'input[id="surveyTitle"]',
     createButton: '//button[.="CREATE SURVEY"]',
-    getstarted: '//button[@class="wds-button"]',
+    getstarted: '//button[.="GET STARTED"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
     testTitle: '//a[@title="Testing Do Not Delete"]',

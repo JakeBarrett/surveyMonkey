@@ -1,16 +1,16 @@
-const selectors = require('../sources/selectors')
-const functions = require('../sources/functions')
-const data = require('../sources/data')
+// const selectors = require('../sources/selectors')
+// const functions = require('../sources/functions')
+// const data = require('../sources/data')
 
-module.exports = {
+// module.exports = {
 
-    before : browser => {
-        browser.url('https://www.surveymonkey.com')
-    },
+//     before : browser => {
+//         browser.url('https://www.surveymonkey.com')
+//     },
 
-    after: browser => {
-       browser.end()
-   },
+//     after: browser => {
+//        browser.end()
+//    },
 
 // "QM-3: Login & Logout" : browser => {
 //     functions.loginFunction(browser,selectors,data.userdata)
@@ -42,4 +42,4 @@ module.exports = {
 //     .pause(5000)
 // },
 
-}
+//}
