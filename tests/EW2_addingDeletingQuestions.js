@@ -9,7 +9,6 @@
 //     after: browser => {
 //         browser
 //     },
-    
 //     'QM-6 Adding and Deleting Questions': browser => {
 //         browser
 //             functions.loginFunction(browser, selectors, data.userdata)
