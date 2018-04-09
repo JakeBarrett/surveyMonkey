@@ -22,7 +22,11 @@ module.exports = {
         functions.addingDeletingQuestions(browser, data)
     },
 
-    // 'Send Survey': browser => {
-    //     functions.sendSurvey(browser)
-    // },
+    'Send Survey': browser => {
+        functions.sendSurvey(browser)
+    },
+
+    'Delete Survey': browser => {
+        functions.deleteSurvey(browser)
+    },
 }

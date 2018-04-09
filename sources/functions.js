@@ -97,9 +97,9 @@ const addingDeletingQuestions = (browser, data) => {
 const sendSurvey = (browser) => {
     browser
         .useXpath()
-        //.click(selectors.mySurveys)
         .click(selectors.testTitle)
         .click(selectors.collectResponces)
+        .waitForElementVisible(selectors.xButton, 2000)
         .click(selectors.xButton)
         .waitForElementVisible(selectors.webLink, 2000)
         .click(selectors.webLink)
@@ -107,6 +107,7 @@ const sendSurvey = (browser) => {
         .click(selectors.copyButton)
         .waitForElementPresent('//div[@class="sm-notification-container"]', 3000)
         .assert.elementPresent('//div[@class="sm-notification-container"]')
+        .click(selectors.mySurveys)
 }
 
 //Evan
