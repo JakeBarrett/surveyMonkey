@@ -199,8 +199,8 @@ let editQuestionFunction=(browser,selectors,data)=>{
 
 let analyzingDataFunction = (browser,selectors,data) => {
     browser
-    .back()
     .useXpath()
+    .getLocationInView(selectors.mySurveysButton)
     .waitForElementVisible(selectors.mySurveysButton,3000)
     .click(selectors.mySurveysButton)
     .click(selectors.analyzeDataSurvey)
