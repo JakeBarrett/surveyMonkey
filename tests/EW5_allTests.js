@@ -14,5 +14,15 @@ module.exports = {
         functions.loginFunction(browser, selectors, data.userdata)
     },
 
-    
+    'Crate Survery': browser => {
+        functions.createSurvey(browser, data)
+    },
+
+    'Add and Deleting Questions': browser => {
+        functions.addingDeletingQuestions(browser, data)
+    },
+
+    // 'Send Survey': browser => {
+    //     functions.sendSurvey(browser)
+    // },
 }
