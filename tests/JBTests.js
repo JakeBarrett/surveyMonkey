@@ -16,9 +16,9 @@ module.exports = {
     functions.loginFunction(browser,selectors,data.userdata)
 },
 
- /*
+ 
 "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
-*/
+
 
 "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
 

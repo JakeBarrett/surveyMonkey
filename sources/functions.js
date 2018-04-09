@@ -195,15 +195,14 @@ let editQuestionFunction=(browser,selectors,data)=>{
     .useCss()
     .click(selectors.saveButton)
     .verify.containsText(selectors.question1,data.question)
-    .pause(3000)
 }
 
 let analyzingDataFunction = (browser,selectors,data) => {
     browser
-    .pause(3000)
+    .back()
     .useXpath()
+    .waitForElementVisible(selectors.mySurveysButton,3000)
     .click(selectors.mySurveysButton)
-    .pause(3000)
     .click(selectors.analyzeDataSurvey)
     .useCss()
     .waitForElementVisible(selectors.analyzeResultsButton,3000)
