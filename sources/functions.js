@@ -160,9 +160,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
     browser
     .useXpath()
     .click(selectors.mySurveys)
-    .useCss()
     .click(selectors.surveyTitle)
-    .useXpath()
     .click(selectors.designSurvey)
     .useCss()
     .click(selectors.getStarted)
@@ -180,12 +178,15 @@ let editQuestionFunction=(browser,selectors,data)=>{
     .useCss()
     .click(selectors.saveButton)
     .verify.containsText(selectors.question1,data.question)
+    .pause(3000)
 }
 
 let analyzingDataFunction = (browser,selectors,data) => {
     browser
+    .pause(3000)
     .useXpath()
-    .click(selectors.mySurveys)
+    .click(selectors.mySurveysButton)
+    .pause(3000)
     .click(selectors.analyzeDataSurvey)
     .useCss()
     .waitForElementVisible(selectors.analyzeResultsButton,3000)
@@ -213,6 +214,6 @@ let analyzingDataFunction = (browser,selectors,data) => {
         uiTest: uiTest,
         setInputValue: setInputValue,
         editQuestionFunction:editQuestionFunction,
-        signUp: signUp,
+        //signUp: signUp,
         analyzingDataFunction : analyzingDataFunction,
     }
