@@ -25,7 +25,7 @@ let loginLogoutFunction = (browser,selectors,data) => {
     .waitForElementVisible(selectors.loginButtonCss, 4000)
 }
 
-//EW
+//Evan
 let loginFunction = (browser, selectors, data) => {
     browser
         .useXpath()
@@ -39,7 +39,7 @@ let loginFunction = (browser, selectors, data) => {
     
 }
 
-//EW
+//Evan
 const createSurvey = (browser, data) => {
     browser
         .click(selectors.createSurvey)
@@ -59,7 +59,7 @@ const createSurvey = (browser, data) => {
         .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
-//EW 
+//Evan
 const addingDeletingQuestions = (browser, data) => {
     browser
         .useXpath()
@@ -90,7 +90,7 @@ const addingDeletingQuestions = (browser, data) => {
         .pause(3000)
 }
 
-//EW
+//Evan
 const sendSurvey = (browser) => {
     browser
         .useXpath()
@@ -104,6 +104,20 @@ const sendSurvey = (browser) => {
         .click(selectors.copyButton)
         .waitForElementPresent('//div[@class="sm-notification-container"]', 3000)
         .assert.elementPresent('//div[@class="sm-notification-container"]')
+}
+
+//Evan
+const deleteSurvey = (browser) => {
+    browser
+        .useXpath()
+        .waitForElementVisible(selectors.mySurveys, 2000)
+        .click(selectors.mySurveys)
+        .waitForElementVisible(selectors.threeDots, 2000)
+        .click(selectors.threeDots)
+        .click(selectors.deleteSurvey)
+        .waitForElementVisible(selectors.redDelete, 2000)
+        .assert.containsText(selectors.testDeleteTitle, "Testing Do Not Delete")
+        .click(selectors.redDelete)
 }
 
 /**
@@ -204,6 +218,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
         sendSurvey: sendSurvey,
+        deleteSurvey: deleteSurvey,
         signUpValid: signUpValid,
         signUpInvalid: signUpInvalid,
         uiTest: uiTest,

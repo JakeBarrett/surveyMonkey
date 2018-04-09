@@ -12,5 +12,6 @@ module.exports = {
 
     'QM-7 Deleting Survey': browser =>{
         functions.loginFunction(browser, selectors, data.userdata)
+        functions.deleteSurvey(browser)
     },
 }
