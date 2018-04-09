@@ -84,8 +84,8 @@ module.exports = {
 //Editing an Existing Question
 
     editQuestion : {
-        mySurveys : '//ol/li[contains(.,"My Surveys")]',
-        surveyTitle: 'a[title="Do Not Delete Me"]',
+        mySurveys : '//li/a[contains(.,"My Surveys")]',
+        surveyTitle: '//p/a[contains(.,"Edit Question Test")]',
         designSurvey: '//li/a[contains(.,"DESIGN SURVEY")]',
         getStarted: 'button[class="wds-button"]',
         question1: 'div[data-qnumber="1"]',
@@ -99,13 +99,14 @@ module.exports = {
     },
 
 //Analyzing Results
-    analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data")]',
+    analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data Test")]',
     analyzeResultsButton : 'a[data-location="analyze"]',
     questionsSummaries : 'li[id="mode_tab_question_summaries"]',
     dataTrends: 'li[id="mode_tab_trends"]',
     individualResponses: 'li[id="mode_tab_individual_responses"]',
     dataTrendsPage: 'div[class="analyze-pages-content"]',
-    individualResponsesPage : 'div[class="respondent-data"]',
+    individualResponsesPage : 'div[class="analyze-pages-content-wrapper"]',
+    mySurveysButton : '(//li/a[contains(.,"My Surveys")])[1]'
 
 
 

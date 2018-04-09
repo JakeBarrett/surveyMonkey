@@ -177,9 +177,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
     browser
     .useXpath()
     .click(selectors.mySurveys)
-    .useCss()
     .click(selectors.surveyTitle)
-    .useXpath()
     .click(selectors.designSurvey)
     .useCss()
     .click(selectors.getStarted)
@@ -199,6 +197,29 @@ let editQuestionFunction=(browser,selectors,data)=>{
     .verify.containsText(selectors.question1,data.question)
 }
 
+let analyzingDataFunction = (browser,selectors,data) => {
+    browser
+    .back()
+    .useXpath()
+    .waitForElementVisible(selectors.mySurveysButton,3000)
+    .click(selectors.mySurveysButton)
+    .click(selectors.analyzeDataSurvey)
+    .useCss()
+    .waitForElementVisible(selectors.analyzeResultsButton,3000)
+    .click(selectors.analyzeResultsButton)
+    .waitForElementVisible(selectors.questionsSummaries,3000)
+    .verify.elementPresent(selectors.questionsSummaries)
+    .verify.elementPresent(selectors.dataTrends)
+    .verify.elementPresent(selectors.individualResponses)
+    .click(selectors.dataTrends)
+    .waitForElementVisible(selectors.dataTrendsPage,3000)
+    .verify.elementPresent(selectors.dataTrendsPage)
+    .click(selectors.individualResponses)
+    .waitForElementVisible(selectors.individualResponsesPage,5000)
+    .verify.elementPresent(selectors.individualResponsesPage)
+}
+
+
     module.exports = {
         loginLogoutFunction: loginLogoutFunction,
         loginFunction: loginFunction,
@@ -210,4 +231,6 @@ let editQuestionFunction=(browser,selectors,data)=>{
         uiTest: uiTest,
         setInputValue: setInputValue,
         editQuestionFunction:editQuestionFunction,
+        //signUp: signUp,
+        analyzingDataFunction : analyzingDataFunction,
     }
