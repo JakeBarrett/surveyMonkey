@@ -73,6 +73,7 @@ const addingDeletingQuestions = (browser, data) => {
         .click(selectors.addQ)
         .click(selectors.getstarted)
         .click(selectors.questionType)
+        .waitForElementVisible(selectors.singleTB, 2000)
         .click(selectors.singleTB)
         .waitForElementVisible(selectors.enterQ, 2000)
         .setValue(selectors.enterQ, data.q1)
@@ -84,12 +85,28 @@ const addingDeletingQuestions = (browser, data) => {
         .click(selectors.save)
         .waitForElementVisible(selectors.questionTwo, 2000)
         .moveToElement(selectors.questionTwo, undefined, undefined)
-        .waitForElementVisible(selectors.deleteQuestion, 2000)
-        .moveTo(selectors.deleteQuestion)
+        .pause(2000)
+        .moveToElement(selectors.deleteQuestion, undefined, undefined)
         .click(selectors.deleteQuestion)
         .pause(3000)
-
 }
+
+//EW
+const sendSurvey = (browser) => {
+    browser
+        .useXpath()
+        .click(selectors.mySurveys)
+        .click(selectors.testTitle)
+        .click(selectors.collectResponces)
+        .click(selectors.xButton)
+        .waitForElementVisible(selectors.webLink, 2000)
+        .click(selectors.webLink)
+        .waitForElementVisible(selectors.copyButton, 2000)
+        .click(selectors.copyButton)
+        .waitForElementPresent('//div[@class="sm-notification-container"]', 3000)
+        .assert.elementPresent('//div[@class="sm-notification-container"]')
+}
+
 /**
  * Function referencing QM-14 (Signup with valid inputs)
  * @param {object} browser the Nightwatch object
@@ -187,6 +204,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
+        sendSurvey: sendSurvey,
         signUpValid: signUpValid,
         signUpInvalid: signUpInvalid,
         uiTest: uiTest,
