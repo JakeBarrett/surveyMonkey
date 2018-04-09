@@ -10,12 +10,12 @@ module.exports = {
     account : 'a[id="userAcctTab_MainMenu"]',
     signOut : 'a[href="/user/sign-out/"]',
 
-//Creating A Survey
+//Creating A Survey - Evan
     createSurvey: 'a[class="create-survey alt btn SL_split"]',
     scratch: 'button[id="scratch"]',
     surveyName: 'input[id="surveyTitle"]',
     createButton: '//button[.="CREATE SURVEY"]',
-    getstarted: '//button[@class="wds-button"]',
+    getstarted: '//button[.="GET STARTED"]',
     keep: '(//a[@class="wds-button wds-button--sm"])[8]',
     mySurveys: '(//a[@href="/home/?ut_source=header"])[1]',
     testTitle: '//a[@title="Testing Do Not Delete"]',
@@ -49,7 +49,7 @@ module.exports = {
 
 
 
-//Adding and Deleting Questions
+//Adding and Deleting Questions - Evan
     mS: '(//a[contains(text(), "My Surveys")])[1]',
     addQ: '(//span[@class="smf-icon"])[1]',
     enterQ: '(//div[@data-id="editTitle"])[1]',
@@ -62,11 +62,17 @@ module.exports = {
     questionActions: '(//nav[@class"questionsActions]")[2]',
     deleteQuestion: '//a[@name="Delete"]',
 
-    //Sending Survey
+    //Sending Survey - Evan
         collectResponces: '//a[@data-location="collect"]',
         xButton: '//a[@class="dialog-close-btn cb-dialog-b smf-icon"]',
         webLink: '//li[@collector-type="weblink"]',
         copyButton: '//button[@id="copy-link-btn"]',
+
+    //Deleting Surey - Evan
+        threeDots: '(//span[@class="smf-icon"])[14]',
+        deleteSurvey: '(//a[@data-action="delete"])[2]',
+        testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
+        redDelete: '(//a[@class="wds-button wds-button--warning delete-survey"])[2]',
 
     'signup': {
         'homepageSignUpButton': 'a[class="sign-up static-buttons"]',
