@@ -53,57 +53,61 @@ const createSurvey = (browser, data) => {
         .useXpath()
         .waitForElementVisible(selectors.getstarted, 2000)
         .click(selectors.getstarted)
-        .waitForElementNotPresent(selectors.getstarted, 5000)
-        .click(selectors.mySurveys)
-        .waitForElementVisible(selectors.testTitle, 5000)
-        .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
+//         .waitForElementNotPresent(selectors.getstarted, 5000)
+//         .click(selectors.mySurveys)
+//         .waitForElementVisible(selectors.testTitle, 5000)
+//         .expect.element(selectors.testTitle).text.to.equal("Testing Do Not Delete")
 }
 
 //Evan
 const addingDeletingQuestions = (browser, data) => {
     browser
         .useXpath()
-        .waitForElementVisible(selectors.mS, 2000)
-        .pause(1000)
-        .click(selectors.mS)
-        .click(selectors.testTitle)
+        // .waitForElementVisible(selectors.mS, 2000)
+        // .pause(1000)
+        // .click(selectors.mS)
+        //.click(selectors.testTitle)
         .useXpath()
-        .waitForElementVisible(selectors.addQ, 2000)
-        .click(selectors.addQ)
-        .click(selectors.getstarted)
+        //.waitForElementVisible(selectors.addQ, 2000)
+        //.click(selectors.addQ)
+        //.click(selectors.getstarted)
         .click(selectors.questionType)
         .waitForElementVisible(selectors.singleTB, 2000)
         .click(selectors.singleTB)
         .waitForElementVisible(selectors.enterQ, 2000)
         .setValue(selectors.enterQ, data.q1)
+        .waitForElementVisible(selectors.nextQ, 2000)
         .click(selectors.nextQ)
         .pause(2000)
         .click(selectors.questionType)
         .click(selectors.singleTB)
         .setValue(selectors.enterQ, data.q2)
         .click(selectors.save)
-        .waitForElementVisible(selectors.questionTwo, 2000)
+        .waitForElementVisible(selectors.questionTwo, 3000)
         .moveToElement(selectors.questionTwo, undefined, undefined)
         .pause(2000)
         .moveToElement(selectors.deleteQuestion, undefined, undefined)
         .click(selectors.deleteQuestion)
-        .pause(3000)
+        // .getLocationInView(selectors.mySurveys)
+        // .waitForElementVisible(selectors.mySurveys, 2000)
+        // .click(selectors.mySurveys)
 }
 
 //Evan
 const sendSurvey = (browser) => {
     browser
         .useXpath()
-        .click(selectors.mySurveys)
-        .click(selectors.testTitle)
+       // .click(selectors.testTitle)
         .click(selectors.collectResponces)
+        .waitForElementVisible(selectors.xButton, 2000)
         .click(selectors.xButton)
         .waitForElementVisible(selectors.webLink, 2000)
         .click(selectors.webLink)
-        .waitForElementVisible(selectors.copyButton, 2000)
+        .waitForElementVisible(selectors.copyButton, 5000)
         .click(selectors.copyButton)
         .waitForElementPresent('//div[@class="sm-notification-container"]', 3000)
         .assert.elementPresent('//div[@class="sm-notification-container"]')
+        //.click(selectors.mySurveys)
 }
 
 //Evan
@@ -118,6 +122,7 @@ const deleteSurvey = (browser) => {
         .waitForElementVisible(selectors.redDelete, 2000)
         .assert.containsText(selectors.testDeleteTitle, "Testing Do Not Delete")
         .click(selectors.redDelete)
+        
 }
 
 /**
@@ -189,13 +194,17 @@ let uiTest = (browser) => {
 let editQuestionFunction=(browser,selectors,data)=>{
     browser
     .useXpath()
-    .click(selectors.mySurveys)
-    .click(selectors.surveyTitle)
-    .click(selectors.designSurvey)
+    //.click(selectors.mySurveys)
+    //.click(selectors.surveyTitle)
+    //.click(selectors.designSurvey)
     .useCss()
-    .click(selectors.getStarted)
+    //.click(selectors.getStarted)
+    .pause(500)
     .click(selectors.question1)
+    //.waitForElementVisible(selectors.dropDown,5000)
     .click(selectors.dropDown)
+    .pause(500)
+    //.waitForElementVisible(selectors.multipleChoice,7000)
     .click(selectors.multipleChoice)
     .waitForElementVisible(selectors.tealBox,5000)
     .clearValue(selectors.questionInput)
@@ -213,10 +222,10 @@ let editQuestionFunction=(browser,selectors,data)=>{
 let analyzingDataFunction = (browser,selectors,data) => {
     browser
     .useXpath()
-    .getLocationInView(selectors.mySurveysButton)
-    .waitForElementVisible(selectors.mySurveysButton,3000)
-    .click(selectors.mySurveysButton)
-    .click(selectors.analyzeDataSurvey)
+    //.getLocationInView(selectors.mySurveysButton)
+    //.waitForElementVisible(selectors.mySurveysButton,3000)
+    //.click(selectors.mySurveysButton)
+    //.click(selectors.analyzeDataSurvey)
     .useCss()
     .waitForElementVisible(selectors.analyzeResultsButton,3000)
     .click(selectors.analyzeResultsButton)
@@ -230,6 +239,16 @@ let analyzingDataFunction = (browser,selectors,data) => {
     .click(selectors.individualResponses)
     .waitForElementVisible(selectors.individualResponsesPage,5000)
     .verify.elementPresent(selectors.individualResponsesPage)
+}
+
+let previewAndScoreFunction = (browser,selectors,data) => {
+    browser
+    .click(selectors.previewAndScore)
+    .waitForElementPresent(selectors.firstQuestion,5000)
+    .pause(1000)
+    //.useXpath()
+    .click(selectors.hockey)
+
 }
 
 
@@ -247,4 +266,5 @@ let analyzingDataFunction = (browser,selectors,data) => {
         editQuestionFunction:editQuestionFunction,
         //signUp: signUp,
         analyzingDataFunction : analyzingDataFunction,
+        previewAndScoreFunction : previewAndScoreFunction
     }
