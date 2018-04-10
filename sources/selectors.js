@@ -58,9 +58,9 @@ module.exports = {
     nextQ: '(//a[.="NEXT QUESTION"])[1]',
     qType: '//a[@id="changeQType"]',
     save: '(//a[@class="wds-button wds-button--sm save"])[1]',
-    questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
-    questionActions: '(//nav[@class"questionsActions]")[2]',
-    deleteQuestion: '//a[@name="Delete"]',
+    questionFour: '(//h4[@class="question-title-container"])[4]',
+    questionActions: '(//nav[@class"questionsActions]")[4]',
+    deleteQuestion: '//a[@name="Delete"]',    
 
 //Sending Survey - Evan
     collectResponces: '//a[@data-location="collect"]',
@@ -68,7 +68,7 @@ module.exports = {
     webLink: '//li[@collector-type="weblink"]',
     copyButton: '//button[@id="copy-link-btn"]',
 
-//Deleting Surey - Evan
+//Deleting Survey - Evan
      threeDots: '//a[@data-survey-title="Testing Do Not Delete"]',
      deleteSurvey: '(//a[@data-action="delete"])[2]',
      testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
@@ -91,7 +91,7 @@ module.exports = {
 
     editQuestion : {
         mySurveys : '//li/a[contains(.,"My Surveys")]',
-        surveyTitle: '//p/a[contains(.,"Edit Question Test")]',
+        surveyTitle: '//p/a[contains(.,"Testing Do Not Delete")]',
         designSurvey: '//li/a[contains(.,"DESIGN SURVEY")]',
         getStarted: 'button[class="wds-button"]',
         question1: 'div[data-qnumber="1"]',
@@ -104,7 +104,13 @@ module.exports = {
 
     },
 
+// Preview and Score
+    previewAndScore : 'a[data-location="preview"]',
+    firstQuestion: 'div[class="preview"]',
+    hockey : 'span[id="radio-label-291200625_1983870440"]',
+
 //Analyzing Results
+
     analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data Test")]',
     analyzeResultsButton : 'a[data-location="analyze"]',
     questionsSummaries : 'li[id="mode_tab_question_summaries"]',
@@ -112,7 +118,7 @@ module.exports = {
     individualResponses: 'li[id="mode_tab_individual_responses"]',
     dataTrendsPage: 'div[class="analyze-pages-content"]',
     individualResponsesPage : 'div[class="analyze-pages-content-wrapper"]',
-    mySurveysButton : '(//li/a[contains(.,"My Surveys")])[1]'
+    mySurveysButton : '(//li/a[contains(.,"My Surveys")])[1]',
 
 
 

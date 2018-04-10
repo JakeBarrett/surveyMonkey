@@ -45,7 +45,9 @@ module.exports = {
 
 //Adding Quetion(s)
     q1: 'Favorite Soda',
-    q2: 'Favorite Pizza',
+    q2: 'Favorite Team',
+    q3: 'Favorite Meal at Event',
+    q4: 'Favorite Team'
     
 
 }
