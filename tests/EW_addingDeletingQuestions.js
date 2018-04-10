@@ -3,17 +3,16 @@
 // const functions = require('../sources/functions')
 
 // module.exports = {
-//     beforeEach:browser => {
+//     beforEach:browser => {
 //         browser.url('https://www.surveymonkey.com')
 //     },
 //     after: browser => {
 //         browser
 //     },
-//     'QM-4 UI testing - as a user I would like to see the main content': browser => {
+//     'QM-6 Adding and Deleting Questions': browser => {
 //         browser
-//             functions.uiTest(browser)       
+//             functions.loginFunction(browser, selectors, data.userdata)
+//             functions.addingDeletingQuestions(browser, data)
+
 //     }
-
-
-
 // }

@@ -1,6 +1,10 @@
 const properties = require('./nightwatch.props')
 module.exports = {
     "src_folders" : "tests",
+    "custom_commands_path": "",
+    "custom_assertions_path": "",
+    "page_objects_path": "page-objects",
+    "globals_path": "",
     
   
     "selenium" : {
@@ -15,7 +19,7 @@ module.exports = {
   
     "test_settings" : {
       "default" : {
-        "launch_url" : "http://localhost",
+        "launch_url" : "https://www.surveymonkey.com",
         "selenium_port"  : 4445,
         "selenium_host"  : "localhost",
         "silent": true,
