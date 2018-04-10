@@ -9,11 +9,10 @@
 //     after: browser => {
 //         browser
 //     },
-//     'QM-2 Creating Survey': browser => {
-//         browser
-//             functions.loginFunction(browser, selectors, data.userdata)
-//             functions.createSurvey(browser, data)
-            
-//     }
 
+//     'QM-33 Send Survey': browser => {
+//         functions.loginFunction(browser, selectors, data.userdata)
+//         functions.sendSurvey(browser)
+
+//     },
 // }

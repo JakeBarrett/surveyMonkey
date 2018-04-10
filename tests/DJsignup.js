@@ -15,3 +15,6 @@
 //     "QM-5: Sign Up": browser => functions.signUp(browser)
 
 // }
+    //"QM-14: Sign Up (valid inputs)": browser => functions.signUpValid(browser),
+//     "QM-18: Sign Up (invalid inputs)": browser => functions.signUpInvalid(browser),
+// }
