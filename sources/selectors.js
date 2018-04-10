@@ -58,9 +58,9 @@ module.exports = {
     nextQ: '(//a[.="NEXT QUESTION"])[1]',
     qType: '//a[@id="changeQType"]',
     save: '(//a[@class="wds-button wds-button--sm save"])[1]',
-    questionTwo: '(//div[@class="question-body clearfix notranslate "])[2]',
-    questionActions: '(//nav[@class"questionsActions]")[2]',
-    deleteQuestion: '//a[@name="Delete"]',
+    questionFour: '(//h4[@class="question-title-container"])[4]',
+    questionActions: '(//nav[@class"questionsActions]")[4]',
+    deleteQuestion: '//a[@name="Delete"]',    
 
 //Sending Survey - Evan
     collectResponces: '//a[@data-location="collect"]',
