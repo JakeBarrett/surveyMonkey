@@ -22,11 +22,17 @@ module.exports = {
         functions.addingDeletingQuestions(browser, data)
     },
 
-    'Send Survey': browser => {
-        functions.sendSurvey(browser)
-    },
+    "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
 
-    'Delete Survey': browser => {
-        functions.deleteSurvey(browser)
-    },
+    "QM-34 Preview and Score" : browser => {functions.previewAndScoreFunction(browser,selectors,data)},
+
+    // 'Send Survey': browser => {
+    //     functions.sendSurvey(browser)
+    // },
+
+    // "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
+
+    // 'Delete Survey': browser => {
+    //     functions.deleteSurvey(browser)
+    // },
 }
