@@ -242,10 +242,6 @@ let analyzingDataFunction = (browser,selectors,data) => {
         loginFunction: loginFunction,
         createSurvey: createSurvey,
         addingDeletingQuestions: addingDeletingQuestions,
-<<<<<<< HEAD
-        uiTest: uiTest,
-        signUp: signUp,
-=======
         sendSurvey: sendSurvey,
         deleteSurvey: deleteSurvey,
         signUpValid: signUpValid,
@@ -255,5 +251,4 @@ let analyzingDataFunction = (browser,selectors,data) => {
         editQuestionFunction:editQuestionFunction,
         //signUp: signUp,
         analyzingDataFunction : analyzingDataFunction,
->>>>>>> develop
     }
