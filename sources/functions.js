@@ -193,18 +193,17 @@ let uiTest = (browser) => {
 
 let editQuestionFunction=(browser,selectors,data)=>{
     browser
-    .useXpath()
+    //.useXpath()
     //.click(selectors.mySurveys)
     //.click(selectors.surveyTitle)
     //.click(selectors.designSurvey)
     .useCss()
     //.click(selectors.getStarted)
-    .pause(500)
+    .pause(1000)
     .click(selectors.question1)
     //.waitForElementVisible(selectors.dropDown,5000)
     .click(selectors.dropDown)
-    .pause(500)
-    //.waitForElementVisible(selectors.multipleChoice,7000)
+    .waitForElementVisible(selectors.multipleChoice,7000)
     .click(selectors.multipleChoice)
     .waitForElementVisible(selectors.tealBox,5000)
     .clearValue(selectors.questionInput)
@@ -241,15 +240,7 @@ let analyzingDataFunction = (browser,selectors,data) => {
     .verify.elementPresent(selectors.individualResponsesPage)
 }
 
-let previewAndScoreFunction = (browser,selectors,data) => {
-    browser
-    .click(selectors.previewAndScore)
-    .waitForElementPresent(selectors.firstQuestion,5000)
-    .pause(1000)
-    //.useXpath()
-    .click(selectors.hockey)
 
-}
 
 
     module.exports = {
@@ -266,5 +257,4 @@ let previewAndScoreFunction = (browser,selectors,data) => {
         editQuestionFunction:editQuestionFunction,
         //signUp: signUp,
         analyzingDataFunction : analyzingDataFunction,
-        previewAndScoreFunction : previewAndScoreFunction
     }

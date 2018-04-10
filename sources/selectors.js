@@ -104,11 +104,6 @@ module.exports = {
 
     },
 
-// Preview and Score
-    previewAndScore : 'a[data-location="preview"]',
-    firstQuestion: 'div[class="preview"]',
-    hockey : 'span[id="radio-label-291200625_1983870440"]',
-
 //Analyzing Results
 
     analyzeDataSurvey : '//p/a[contains(.,"Analyzing Data Test")]',
