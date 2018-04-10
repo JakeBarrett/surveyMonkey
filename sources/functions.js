@@ -100,9 +100,9 @@ const addingDeletingQuestions = (browser, data) => {
         .pause(1000)
         .moveToElement(selectors.deleteQuestion, undefined, undefined)
         .click(selectors.deleteQuestion)
-        // .getLocationInView(selectors.mySurveys)
-        // .waitForElementVisible(selectors.mySurveys, 2000)
-        // .click(selectors.mySurveys)
+        .getLocationInView(selectors.mySurveys)
+        .waitForElementVisible(selectors.mySurveys, 2000)
+        .click(selectors.mySurveys)
 }
 
 //Evan
