@@ -62,7 +62,6 @@ var UIcommands = {
 			.assert.visible('@loginButtonCss')
 			.verify.containsText('@loginButtonCss', 'LOG IN')
             .click('@loginButtonCss')
-            
             .verify.elementNotPresent('@errorMessage')
     },
     fillInForm: function (username, password) {
@@ -77,23 +76,17 @@ var UIcommands = {
 			.waitForElementPresent('body', 2000)
 			.waitForElementPresent('@signUpPageHeader', 5000)
 			.verify.visible('@signUpPageHeader')
-
 			.assert.title('Sign up for a FREE SurveyMonkey account')
 			.verify.elementPresent('@usernameInput')
 			.assert.visible('@usernameInput')
-
 			.verify.elementPresent('@passwordInput')
 			.assert.visible('@passwordInput')
-
 			.verify.elementPresent('@emailInput')
             .assert.visible('@emailInput')
-        
 			.verify.elementPresent('@firstNameInput')
 			.assert.visible('@firstNameInput')
-            
             .verify.elementPresent('@lastNameInput')
 			.assert.visible('@lastNameInput')
-           
             .verify.elementPresent('@signUpButton')
 			.assert.visible('@signUpButton')
             .verify.containsText('@signUpButton', 'CREATE ACCOUNT')
@@ -107,10 +100,71 @@ var UIcommands = {
             .setValue('@firstNameInput', firstname)
             .setValue('@lastNameInput', lastname)
             .click('@signUpButton')
-            
             .verify.elementPresent('@errorMessage')
             .verify.elementPresent('div[class="missing"]')
     },
+    navigation: function () {
+        return this 
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('@howItWorks')
+            .click('@howItWorks')
+
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('@products')
+            .click('@products')
+
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('@examples')
+            .click('@examples')
+            
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('@resources')
+            .click('@resources')
+            
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('@planPricing')
+            .click('@planPricing')
+    },
+    planPricing: function () {
+        return this
+            .waitForElementPresent('body', 2000)
+            .waitForElementVisible('@enterpricePlan', 2000)
+            .verify.visible('@enterpricePlan')
+            .verify.containsText('@enterpricePlan', 'SEE ENTERPRICE PLAN')
+
+            .waitForElementVisible('@basic', 2000)
+            .verify.visible('@basic')
+            .verify.containsText('@basic', 'BASIC')
+
+            .waitForElementVisible('@standard', 2000)
+            .verify.visible('@standard')
+            .verify.containsText('@standard', 'STANDARD')
+
+
+            .waitForElementVisible('@advantage', 2000)
+            .verify.visible('@advantage')
+            .verify.containsText('@advantage', 'ADVANTAGE')
+
+            .waitForElementVisible('@premier', 2000)
+            .verify.visible('@premier')
+            .verify.containsText('@premier', 'PREMIER')
+
+
+    },
+    parallax: function () {
+        return this
+            .waitForElementVisible('@navbar', 2000)
+            .verify.visible('@navbar')
+            .verify.visible('#hero-arrow')
+            .click('#hero-arrow')
+            
+
+    }
     
 
 }
@@ -179,6 +233,23 @@ module.exports = {
             locateStrategy: 'xpath'
         },
         planPricing: 'a[href="/pricing/?ut_source=header"]',
+        enterpricePlan: 'div[class="cell size1of2 text-right"]',
+        basic: {
+            selector: '(//h3[@class="package-name"])[1]',
+            locateStrategy: 'xpath'
+        },
+        standard: {
+            selector: '(//h3[@class="package-name"])[1]',
+            locateStrategy: 'xpath'
+        },
+        advantage: {
+            selector: '(//h3[@class="package-name"])[4]',
+            locateStrategy: 'xpath'
+        },
+        premier: {
+            selector: '(//h3[@class="package-name"])[5]',
+            locateStrategy: 'xpath'
+        },
 
         //main
         banner: 'h1[class="national-med white medium hero-text-1"]',
