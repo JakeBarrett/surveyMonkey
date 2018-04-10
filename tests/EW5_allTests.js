@@ -22,15 +22,15 @@ module.exports = {
         functions.addingDeletingQuestions(browser, data)
     },
 
-    //"QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
+    "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
 
-    // 'Send Survey': browser => {
-    //     functions.sendSurvey(browser)
-    // },
+    'Send Survey': browser => {
+       functions.sendSurvey(browser)
+    },
 
-    // "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
+     "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
 
-    // 'Delete Survey': browser => {
-    //     functions.deleteSurvey(browser)
-    // },
+    'Delete Survey': browser => {
+        functions.deleteSurvey(browser)
+    },
 }
