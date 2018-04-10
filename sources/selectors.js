@@ -68,7 +68,7 @@ module.exports = {
     webLink: '//li[@collector-type="weblink"]',
     copyButton: '//button[@id="copy-link-btn"]',
 
-//Deleting Surey - Evan
+//Deleting Survey - Evan
      threeDots: '//a[@data-survey-title="Testing Do Not Delete"]',
      deleteSurvey: '(//a[@data-action="delete"])[2]',
      testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
