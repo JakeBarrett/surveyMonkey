@@ -102,7 +102,7 @@ const addingDeletingQuestions = (browser, data) => {
         .click(selectors.deleteQuestion)
         .getLocationInView(selectors.mySurveys)
         .waitForElementVisible(selectors.mySurveys, 2000)
-        .click(selectors.mySurveys)
+        //.click(selectors.mySurveys)
 }
 
 //Evan
@@ -211,12 +211,13 @@ let editQuestionFunction=(browser,selectors,data)=>{
     //.click(selectors.designSurvey)
     .useCss()
     //.click(selectors.getStarted)
-    .pause(500)
+    .pause(1000)
     .click(selectors.question1)
-    //.waitForElementVisible(selectors.dropDown,5000)
+    .pause(500)
+    .waitForElementVisible(selectors.dropDown,5000)
     .click(selectors.dropDown)
     .pause(500)
-    //.waitForElementVisible(selectors.multipleChoice,7000)
+    .waitForElementVisible(selectors.multipleChoice,7000)
     .click(selectors.multipleChoice)
     .waitForElementVisible(selectors.tealBox,5000)
     .clearValue(selectors.questionInput)
