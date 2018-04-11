@@ -31,7 +31,6 @@ module.exports = {
 
      "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
 
-     'Delete Survey': browser => {
-         functions.deleteSurvey(browser)
+     'Delete Survey': browser => {functions.deleteSurvey(browser)
      },
 }
