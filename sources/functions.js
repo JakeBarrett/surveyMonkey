@@ -213,15 +213,8 @@ let editQuestionFunction=(browser,selectors,data)=>{
     //.click(selectors.getStarted)
     .pause(1000)
     .click(selectors.question1)
-<<<<<<< HEAD
     .waitForElementVisible(selectors.dropDown,5000)
     .click(selectors.dropDown)
-=======
-    .pause(500)
-    .waitForElementVisible(selectors.dropDown,5000)
-    .click(selectors.dropDown)
-    .pause(500)
->>>>>>> develop
     .waitForElementVisible(selectors.multipleChoice,7000)
     .click(selectors.multipleChoice)
     .waitForElementVisible(selectors.tealBox,5000)

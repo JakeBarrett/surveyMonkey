@@ -12,7 +12,7 @@ module.exports = {
     signUpData: {
         username: "danjintest3",
         password: "testtest",
-        email: "danjin1@test.com",
+        email: "danjin11@test.com",
         firstName: "Test",
         lastName: "Test",
         usernameInvalid: "Please make your username at least 3 characters long.",
