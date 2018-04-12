@@ -115,7 +115,7 @@ const sendSurvey = (browser) => {
         .click(selectors.xButton)
         .waitForElementVisible(selectors.webLink, 7000)
         .click(selectors.webLink)
-        .waitForElementVisible(selectors.copyButton, 7000)
+        .waitForElementVisible(selectors.copyButton, 10000)
         .click(selectors.copyButton)
         .waitForElementPresent('//div[@class="sm-notification-container"]', 7000)
         .assert.elementPresent('//div[@class="sm-notification-container"]')
@@ -144,7 +144,7 @@ const deleteSurvey = (browser) => {
 let signUpValid = (browser) => {
     browser
         .click(selectors.signup.homepageSignUpButton)
-        .waitForElementVisible(selectors.signup.signUpPageTitle, 2000)
+        .waitForElementVisible(selectors.signup.signUpButton, 5000)
         setInputValue(browser, selectors.signup.usernameInput, data.signUpData.username)
         setInputValue(browser, selectors.signup.passwordInput, data.signUpData.password)
         setInputValue(browser, selectors.signup.emailInput, data.signUpData.email)
