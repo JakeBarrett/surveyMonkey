@@ -7,7 +7,7 @@ module.exports = {
     },
 
 //Suvey Name
-    surveyTitle: "Testing Do Not Delete",
+    surveyTitle: "Sports",
     
     signUpData: {
         username: "danjintest3",

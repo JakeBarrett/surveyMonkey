@@ -14,7 +14,7 @@ module.exports = {
         functions.loginFunction(browser, selectors, data.userdata)
     },
 
-    'Crate Survery': browser => {
+    'Create Survery': browser => {
         functions.createSurvey(browser, data)
     },
 
@@ -22,7 +22,7 @@ module.exports = {
         functions.addingDeletingQuestions(browser, data)
     },
 
-    "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors.editQuestion,data.editQuestionData),
+    "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors,data.editQuestionData),
 
 
      'Send Survey': browser => {
