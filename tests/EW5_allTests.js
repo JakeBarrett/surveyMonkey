@@ -7,7 +7,7 @@ module.exports = {
         browser.url('https://www.surveymonkey.com')
     },
     after: browser => {
-        browser
+        browser.end()
     },
 
     'Login': browser => {
