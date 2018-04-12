@@ -69,7 +69,7 @@ module.exports = {
     copyButton: '//button[@id="copy-link-btn"]',
 
 //Deleting Survey - Evan
-     threeDots: '//a[@data-survey-title="Testing Do Not Delete"]',
+     threeDots: '//a[@data-survey-title="Sports"]',
      deleteSurvey: '(//a[@data-action="delete"])[2]',
      testDeleteTitle: '(//span[@class="svy-title notranslate"])[2]',
      redDelete: '(//a[@class="wds-button wds-button--warning delete-survey"])[2]',
@@ -88,8 +88,6 @@ module.exports = {
     },
 
 //Editing an Existing Question
-
-    editQuestion : {
         mySurveys : '//li/a[contains(.,"My Surveys")]',
         surveyTitle: '//p/a[contains(.,"Testing Do Not Delete")]',
         designSurvey: '//li/a[contains(.,"DESIGN SURVEY")]',
@@ -102,7 +100,6 @@ module.exports = {
         answerInput: '(//div[@class="rte input"])[2]',
         saveButton: 'a[class="wds-button wds-button--sm save"]',
 
-    },
 
 //Analyzing Results
 
