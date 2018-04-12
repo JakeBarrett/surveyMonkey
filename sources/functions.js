@@ -217,7 +217,7 @@ let editQuestionFunction=(browser,selectors,data)=>{
     .waitForElementVisible(selectors.questionType, 5000)
     .click(selectors.questionType)
     .useCss()
-    .waitForElementVisible(selectors.multipleChoice,5000)
+    .waitForElementVisible(selectors.multipleChoice,7000)
     .click(selectors.multipleChoice)
     .waitForElementVisible(selectors.tealBox,5000)
     .clearValue(selectors.questionInput)
