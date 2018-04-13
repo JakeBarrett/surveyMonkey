@@ -57,10 +57,10 @@ var UIcommands = {
     loginPage: function () {
         return this
             .waitForElementPresent('body', 2000)
-            .waitForElementVisible('@loginButtonCss', 2000)
-            .verify.elementPresent('@loginButtonCss')
-            .assert.visible('@loginButtonCss')
-            .verify.containsText('@loginButtonCss', 'LOG IN')
+			.waitForElementVisible('@loginButtonCss', 5000)
+			.verify.elementPresent('@loginButtonCss')
+			.assert.visible('@loginButtonCss')
+			.verify.containsText('@loginButtonCss', 'LOG IN')
             .click('@loginButtonCss')
             .verify.elementNotPresent('@errorMessage')
     },
@@ -100,8 +100,9 @@ var UIcommands = {
             .setValue('@firstNameInput', firstname)
             .setValue('@lastNameInput', lastname)
             .click('@signUpButton')
+            browser.pause(1000)
             .verify.elementPresent('@errorMessage')
-            .verify.elementPresent('div[class="missing"]')
+            .verify.elementNotPresent('div[class="missing"]')
     },
     navigation: function () {
         return this
@@ -133,7 +134,7 @@ var UIcommands = {
     monkeyPlans: function () {
         return this
             .waitForElementPresent('body', 2000)
-            .waitForElementVisible('@enterpricePlan', 2000)
+            .waitForElementVisible('@enterpricePlan', 5000)
             .verify.visible('@enterpricePlan')
             .verify.containsText('@enterpricePlan', 'SEE ENTERPRISE PLANS')
 
