@@ -1,36 +1,36 @@
-const selectors = require('../sources/selectors')
-const data = require('../sources/data')
-const functions = require('../sources/functions')
+// const selectors = require('../sources/selectors')
+// const data = require('../sources/data')
+// const functions = require('../sources/functions')
 
-module.exports = {
-    before:browser => {
-        browser.url('https://www.surveymonkey.com')
-    },
-    after: browser => {
-        browser.end()
-    },
+// module.exports = {
+//     before:browser => {
+//         browser.url('https://www.surveymonkey.com')
+//     },
+//     after: browser => {
+//         browser.end()
+//     },
 
-    'Login': browser => {
-        functions.loginFunction(browser, selectors, data.userdata)
-    },
+//     'Login': browser => {
+//         functions.loginFunction(browser, selectors, data.userdata)
+//     },
 
-    'Create Survery': browser => {
-        functions.createSurvey(browser, data)
-    },
+//     'Create Survery': browser => {
+//         functions.createSurvey(browser, data)
+//     },
 
-    'Add and Deleting Questions': browser => {
-        functions.addingDeletingQuestions(browser, data)
-    },
+//     'Add and Deleting Questions': browser => {
+//         functions.addingDeletingQuestions(browser, data)
+//     },
 
-    "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors,data.editQuestionData),
+//     "QM-13 Edit a Question" : browser => functions.editQuestionFunction(browser,selectors,data.editQuestionData),
 
 
-     'Send Survey': browser => {
-        functions.sendSurvey(browser)
-     },
+//      'Send Survey': browser => {
+//         functions.sendSurvey(browser)
+//      },
 
-     "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
+//      "QM-32 Analyzing Survey Results" : browser => {functions.analyzingDataFunction(browser,selectors,data)},
 
-     'Delete Survey': browser => {functions.deleteSurvey(browser)
-     },
-}
+//      'Delete Survey': browser => {functions.deleteSurvey(browser)
+//      },
+// }
