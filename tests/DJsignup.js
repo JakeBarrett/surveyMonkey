@@ -1,18 +1,18 @@
-// const selectors = require('../sources/selectors')
-// const functions = require('../sources/functions')
-// const data = require('../sources/data')
+const selectors = require('../sources/selectors')
+const functions = require('../sources/functions')
+const data = require('../sources/data')
 
-// module.exports = {
+module.exports = {
 
-//     beforeEach: browser => {
-//         browser.url('https://www.surveymonkey.com')
-//     },
+    beforeEach: browser => {
+        browser.url('https://www.surveymonkey.com')
+    },
 
-//     after: browser => {
-//         browser.end()
-//     },
-//     "QM-18: Sign Up (invalid inputs)": browser => functions.signUpInvalid(browser),
-//     "QM-14: Sign Up (valid inputs)": browser => functions.signUpValid(browser),
+    after: browser => {
+        browser.end()
+    },
+    "QM-18: Sign Up (invalid inputs)": browser => functions.signUpInvalid(browser),
+    "QM-14: Sign Up (valid inputs)": browser => functions.signUpValid(browser),
 
-// }
+}
 
