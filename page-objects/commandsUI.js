@@ -46,16 +46,16 @@ var UIcommands = {
             .assert.elementPresent('@iPhone3rd')
     },
     signUpPage: function () {
-		return this
+        return this
             .waitForElementPresent('body', 2000)
-			.waitForElementVisible('@homepageSignUpButton', 2000)
-			.verify.elementPresent('@homepageSignUpButton')
-			.assert.visible('@homepageSignUpButton')
-			.verify.containsText('@homepageSignUpButton', 'SIGN UP')
-			.click('@homepageSignUpButton')
+            .waitForElementVisible('@homepageSignUpButton', 2000)
+            .verify.elementPresent('@homepageSignUpButton')
+            .assert.visible('@homepageSignUpButton')
+            .verify.containsText('@homepageSignUpButton', 'SIGN UP')
+            .click('@homepageSignUpButton')
     },
     loginPage: function () {
-		return this
+        return this
             .waitForElementPresent('body', 2000)
 			.waitForElementVisible('@loginButtonCss', 5000)
 			.verify.elementPresent('@loginButtonCss')
@@ -65,38 +65,38 @@ var UIcommands = {
             .verify.elementNotPresent('@errorMessage')
     },
     fillInForm: function (username, password) {
-		return this
-			.waitForElementVisible('body', 1000)
-			.setValue('@usernameInput', username)
+        return this
+            .waitForElementVisible('body', 1000)
+            .setValue('@usernameInput', username)
             .setValue('@passwordInput', password)
             .click('@submitButton')
-	},
+    },
     createAccountPage: function () {
-		return this
-			.waitForElementPresent('body', 2000)
-			.waitForElementPresent('@signUpPageHeader', 5000)
-			.verify.visible('@signUpPageHeader')
-			.assert.title('Sign up for a FREE SurveyMonkey account')
-			.verify.elementPresent('@usernameInput')
-			.assert.visible('@usernameInput')
-			.verify.elementPresent('@passwordInput')
-			.assert.visible('@passwordInput')
-			.verify.elementPresent('@emailInput')
+        return this
+            .waitForElementPresent('body', 2000)
+            .waitForElementPresent('@signUpPageHeader', 5000)
+            .verify.visible('@signUpPageHeader')
+            .assert.title('Sign up for a FREE SurveyMonkey account')
+            .verify.elementPresent('@usernameInput')
+            .assert.visible('@usernameInput')
+            .verify.elementPresent('@passwordInput')
+            .assert.visible('@passwordInput')
+            .verify.elementPresent('@emailInput')
             .assert.visible('@emailInput')
-			.verify.elementPresent('@firstNameInput')
-			.assert.visible('@firstNameInput')
+            .verify.elementPresent('@firstNameInput')
+            .assert.visible('@firstNameInput')
             .verify.elementPresent('@lastNameInput')
-			.assert.visible('@lastNameInput')
+            .assert.visible('@lastNameInput')
             .verify.elementPresent('@signUpButton')
-			.assert.visible('@signUpButton')
+            .assert.visible('@signUpButton')
             .verify.containsText('@signUpButton', 'CREATE ACCOUNT')
     },
     createAccount: function (username, password, email, firstname, lastname) {
-		return this
-			.waitForElementVisible('body', 2000)
-			.setValue('@usernameInput', username)
-			.setValue('@passwordInput', password)
-			.setValue('@emailInput', email)
+        return this
+            .waitForElementVisible('body', 2000)
+            .setValue('@usernameInput', username)
+            .setValue('@passwordInput', password)
+            .setValue('@emailInput', email)
             .setValue('@firstNameInput', firstname)
             .setValue('@lastNameInput', lastname)
             .click('@signUpButton')
@@ -105,7 +105,7 @@ var UIcommands = {
             .verify.elementNotPresent('div[class="missing"]')
     },
     navigation: function () {
-        return this 
+        return this
             .waitForElementVisible('@navbar', 2000)
             .verify.visible('@navbar')
             .verify.visible('@howItWorks')
@@ -120,23 +120,23 @@ var UIcommands = {
             .verify.visible('@navbar')
             .verify.visible('@examples')
             .click('@examples')
-            
+
             .waitForElementVisible('@navbar', 2000)
             .verify.visible('@navbar')
             .verify.visible('@resources')
             .click('@resources')
-            
+
             .waitForElementVisible('@navbar', 2000)
             .verify.visible('@navbar')
             .verify.visible('@planPricing')
             .click('@planPricing')
     },
-    planPricing: function () {
+    monkeyPlans: function () {
         return this
             .waitForElementPresent('body', 2000)
             .waitForElementVisible('@enterpricePlan', 5000)
             .verify.visible('@enterpricePlan')
-            .verify.containsText('@enterpricePlan', 'SEE ENTERPRICE PLAN')
+            .verify.containsText('@enterpricePlan', 'SEE ENTERPRISE PLANS')
 
             .waitForElementVisible('@basic', 2000)
             .verify.visible('@basic')
@@ -144,7 +144,7 @@ var UIcommands = {
 
             .waitForElementVisible('@standard', 2000)
             .verify.visible('@standard')
-            .verify.containsText('@standard', 'STANDARD')
+            .verify.containsText('@standard', 'BASIC')
 
 
             .waitForElementVisible('@advantage', 2000)
@@ -154,19 +154,91 @@ var UIcommands = {
             .waitForElementVisible('@premier', 2000)
             .verify.visible('@premier')
             .verify.containsText('@premier', 'PREMIER')
+    },
+    products: function () {
+        return this
+            .click('@products')
 
+            .waitForElementVisible('@productsNavMenu', 5000)
+            .verify.visible('@productsNavMenu')
+            .waitForElementPresent('@surveyPlatform', 5000)
+            .click('@surveyPlatform')
+            .assert.title('Survey Software Features to Ignite Your Curiosity | SurveyMonkey')
 
+            .waitForElementPresent('body', 5000)
+            .click('@products')
+            .waitForElementVisible('@productsNavMenu', 5000)
+            .verify.visible('@productsNavMenu')
+            .waitForElementPresent('@surveyPanel', 5000)
+            .click('@surveyPanel')
+            .assert.title('Market Research Solution and Analysis | SurveyMonkey Audience')
+
+            .waitForElementPresent('body', 5000)
+            .click('@products')
+            .waitForElementVisible('@productsNavMenu', 5000)
+            .verify.visible('@productsNavMenu')
+            .waitForElementPresent('@appDirectory', 5000)
+            .click('@appDirectory')
+            .assert.title('Apps | SurveyMonkey')
+
+            .waitForElementPresent('body', 5000)
+            .click('@products')
+            .waitForElementVisible('@productsNavMenu', 5000)
+            .verify.visible('@productsNavMenu')
+            .waitForElementPresent('@onlineForms', 5000)
+            .click('@onlineForms')
+            .assert.title('Create Free Online Forms: Wufoo | SurveyMonkey')
+
+            .waitForElementPresent('body', 5000)
+            .click('a[class="responsive-logo"]')
+            .click('@products')
+            .waitForElementVisible('@productsNavMenu', 5000)
+            .verify.visible('@productsNavMenu')
+
+    },
+    enterprise: function () {
+        return this
+            .waitForElementPresent('@overview', 5000)
+            .click('@overview')
+            .assert.title('SurveyMonkey: The World’s Most Popular Free Online Survey Tool')
+
+            // .waitForElementPresent('body', 5000)
+            // .click('@products')
+            // .waitForElementVisible('@productsNavMenu', 5000)
+            // .verify.visible('@productsNavMenu')
+            // .waitForElementPresent('@surveyPlatform', 5000)
+            // .click('@esurveyPlatform')
+
+            // .waitForElementPresent('body', 5000)
+            // .click('@products')
+            // .waitForElementVisible('@productsNavMenu', 5000)
+            // .verify.visible('@productsNavMenu')
+            // .waitForElementPresent('@customerService', 5000)
+            // .click('@customerService')
+
+            // .waitForElementPresent('body', 5000)
+            // .click('@products')
+            // .waitForElementVisible('@productsNavMenu', 5000)
+            // .verify.visible('@productsNavMenu')
+            // .waitForElementPresent('@contentMarketing', 5000)
+            // .click('@contentMarketing')
+
+            // .waitForElementPresent('body', 5000)
+            // .click('@products')
+            // .waitForElementVisible('@productsNavMenu', 5000)
+            // .verify.visible('@productsNavMenu')
+            // .waitForElementPresent('@appManagement', 5000)
+            // .click('@appManagement')
     },
     parallax: function () {
         return this
             .waitForElementVisible('@navbar', 2000)
             .verify.visible('@navbar')
             .verify.visible('#hero-arrow')
+            .waitForElementPresent('@surveyPanel', 2000)
             .click('#hero-arrow')
-            
+    },
 
-    }
-    
 
 }
 module.exports = {
@@ -328,17 +400,17 @@ module.exports = {
         redDelete: '(//a[@class="wds-button wds-button--warning delete-survey"])[2]',
 
         // signup
-            homepageSignUpButton: 'a[class="sign-up static-buttons"]',
-            signUpPageHeader: 'h1[class="wds-type wds-type--page-title wds-type--center wds-m-t-4"]',
-            usernameInput: 'input[name="username"]',
-            passwordInput: 'input[name="password"]',
-            emailInput: 'input[name="email"]',
-            firstNameInput: 'input[name="first_name"]',
-            lastNameInput: 'input[name="last_name"]',
-            signUpButton: 'button[name="submit"]',
-            welcomeText: 'div[id="group_welcome_flow_user_purpose_v3"]',
-            errorMessage : 'div[class="ErrorMessage"]',
-    
+        homepageSignUpButton: 'a[class="sign-up static-buttons"]',
+        signUpPageHeader: 'h1[class="wds-type wds-type--page-title wds-type--center wds-m-t-4"]',
+        usernameInput: 'input[name="username"]',
+        passwordInput: 'input[name="password"]',
+        emailInput: 'input[name="email"]',
+        firstNameInput: 'input[name="first_name"]',
+        lastNameInput: 'input[name="last_name"]',
+        signUpButton: 'button[name="submit"]',
+        welcomeText: 'div[id="group_welcome_flow_user_purpose_v3"]',
+        errorMessage: 'div[class="ErrorMessage"]',
+
 
         //Editing an Existing Question
 
@@ -365,9 +437,60 @@ module.exports = {
         individualResponses: 'li[id="mode_tab_individual_responses"]',
         dataTrendsPage: 'div[class="analyze-pages-content"]',
         individualResponsesPage: 'div[class="analyze-pages-content-wrapper"]',
-        mySurveysButton: '(//li/a[contains(.,"My Surveys")])[1]'
+        mySurveysButton: '(//li/a[contains(.,"My Surveys")])[1]',
+
+        //products: 
+        productsNavMenu: {
+            selector: '(//ul[@class="nav-submenu"])[1]',
+            locateStrategy: 'xpath'
+        },
+        surveyPlatform: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[1]/a',
+            locateStrategy: 'xpath'
+        },
+        surveyPanel: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[2]/a',
+            locateStrategy: 'xpath'
+        },
+        appDirectory: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[3]/a',
+            locateStrategy: 'xpath'
+        },
+        onlineForms: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[4]/a',
+            locateStrategy: 'xpath'
+        },
+        solutions: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[5]/a',
+            locateStrategy: 'xpath'
+        },
+        overview: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[6]/a',
+            locateStrategy: 'xpath'
+        },
+        esurveyPlatform: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[7]/a',
+            locateStrategy: 'xpath'
+        },
+        customerService: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[8]/a',
+            locateStrategy: 'xpath'
+        },
+        employeeEngagement: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[9]/a',
+            locateStrategy: 'xpath'
+        },
+        contentMarketing: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[10]/a',
+            locateStrategy: 'xpath'
+        },
+        appManagement: {
+            selector: '//*[@id="hd"]/div/ol/li[2]/ul/li[11]/a',
+            locateStrategy: 'xpath'
+        },
 
 
+        enterpriceArrow: 'div[class="navarrow w-icon-slider-right"]',
 
     }
 
