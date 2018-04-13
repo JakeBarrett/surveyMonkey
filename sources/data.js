@@ -10,9 +10,9 @@ module.exports = {
     surveyTitle: "Sports",
     
     signUpData: {
-        username: "danjintest6",
+        username: "danjintest10",
         password: "testtest",
-        email: "danjin114@test.com",
+        email: "danjin120@test.com",
         firstName: "Test",
         lastName: "Test",
         usernameInvalid: "Please make your username at least 3 characters long.",
