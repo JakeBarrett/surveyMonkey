@@ -57,7 +57,7 @@ var UIcommands = {
     loginPage: function () {
         return this
             .waitForElementPresent('body', 2000)
-			.waitForElementVisible('@loginButtonCss', 5000)
+			.waitForElementVisible('@loginButtonCss', 7000)
 			.verify.elementPresent('@loginButtonCss')
 			.assert.visible('@loginButtonCss')
 			.verify.containsText('@loginButtonCss', 'LOG IN')
